@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leah | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ======================== NAVIGATION ======================== -->
+    <nav class="nav">
+        <a href="#" class="nav__logo">leah<span>.</span></a>
+        <ul class="nav__links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#logos">Logos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Toggle menu">&#9776;</button>
+    </nav>
+
+    <!-- ======================== HERO ======================== -->
+    <section class="hero" id="hero">
+        <p class="hero__greeting">Hi, my name is</p>
+        <h1 class="hero__name">Leah.</h1>
+        <p class="hero__tagline">
+            Cognitive Science & Computer Science student at UC Irvine.
+            I design accessible experiences and build things that matter.
+        </p>
+        <a href="#projects" class="hero__cta">
+            View My Work <span class="hero__cta-arrow">&rarr;</span>
+        </a>
+    </section>
+
+    <!-- ======================== ABOUT ======================== -->
+    <section class="about" id="about">
+        <p class="section__label">01 / About</p>
+        <h2 class="section__title">About Me</h2>
+        <div class="about__content">
+            <div class="about__photo">
+                <!-- Replace with: <img src="assets/images/profile/your-photo.jpg" alt="Leah"> -->
+                Your photo here
+            </div>
+            <div class="about__text">
+                <p>
+                    Write a bit about yourself here — who you are, what drives you,
+                    and what you're passionate about. Keep it genuine and conversational.
+                </p>
+                <p>
+                    Add another paragraph about your background, your studies in Cognitive
+                    Science and Computer Science, or what you're currently working on.
+                </p>
+                <div class="about__skills">
+                    <span class="about__skill-tag">Figma</span>
+                    <span class="about__skill-tag">HTML/CSS</span>
+                    <span class="about__skill-tag">JavaScript</span>
+                    <span class="about__skill-tag">React</span>
+                    <span class="about__skill-tag">Next.js</span>
+                    <span class="about__skill-tag">Python</span>
+                    <span class="about__skill-tag">Accessibility</span>
+                    <span class="about__skill-tag">UX Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== PROJECTS ======================== -->
+    <section class="projects" id="projects">
+        <p class="section__label">02 / Projects</p>
+        <h2 class="section__title">Selected Work</h2>
+        <div class="projects__grid">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-card__image">
+                    <!-- Replace with: <img src="assets/images/projects/borrowed.png" alt="Borrowed app"> -->
+                    Project screenshot
+                </div>
+                <h3 class="project-card__title">Borrowed</h3>
+                <p class="project-card__desc">
+                    A community-based web app enabling neighbors to share and borrow everyday items.
+                    Built the frontend with Next.js and React.
+                </p>
+                <div class="project-card__tags">
+                    <span class="project-card__tag">Next.js</span>
+                    <span class="project-card__tag">React</span>
+                    <span class="project-card__tag">Flask</span>
+                </div>
+                <a href="#" class="project-card__link">View Project &rarr;</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-card__image">
+                    <!-- Replace with: <img src="assets/images/projects/accessibility-hub.png" alt="Accessibility Hub"> -->
+                    Project screenshot
+                </div>
+                <h3 class="project-card__title">Accessibility Hub</h3>
+                <p class="project-card__desc">
+                    A UX case study focused on making accessibility tools easier to use,
+                    featuring real-time feedback and color-coded visual indicators.
+                </p>
+                <div class="project-card__tags">
+                    <span class="project-card__tag">Figma</span>
+                    <span class="project-card__tag">UX Research</span>
+                    <span class="project-card__tag">Prototyping</span>
+                </div>
+                <a href="#" class="project-card__link">View Case Study &rarr;</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== EXPERIENCE ======================== -->
+    <section class="experience" id="experience">
+        <p class="section__label">03 / Experience</p>
+        <h2 class="section__title">Where I've Worked</h2>
+        <div class="experience__timeline">
+
+            <div class="experience__item">
+                <span class="experience__date">2024 &mdash; Present</span>
+                <div>
+                    <h3 class="experience__role">Digital Accessibility Consultant</h3>
+                    <p class="experience__company">UCI Division of Teaching Excellence and Innovation</p>
+                    <p class="experience__desc">
+                        Provide one-on-one consultations with professors to make educational
+                        materials compliant with ADA digital accessibility requirements.
+                        Lead workshops on accessibility best practices.
+                    </p>
+                </div>
+            </div>
+
+            <div class="experience__item">
+                <span class="experience__date">Seasonal</span>
+                <div>
+                    <h3 class="experience__role">Conversation Partner</h3>
+                    <p class="experience__company">UCI International Programs</p>
+                    <p class="experience__desc">
+                        Coordinate meetups and provide cross-cultural leadership
+                        as a conversation partner for international students.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== PHOTOS ======================== -->
+    <section class="photos" id="photos">
+        <p class="section__label">04 / Photos</p>
+        <h2 class="section__title">Through My Lens</h2>
+        <div class="photos__gallery">
+
+            <div class="photos__item">
+                <!-- <img src="assets/images/photos/photo1.jpg" alt="Description"> -->
+                Photo 1
+            </div>
+            <div class="photos__item">
+                <!-- <img src="assets/images/photos/photo2.jpg" alt="Description"> -->
+                Photo 2
+            </div>
+            <div class="photos__item">
+                <!-- <img src="assets/images/photos/photo3.jpg" alt="Description"> -->
+                Photo 3
+            </div>
+            <div class="photos__item">
+                <!-- <img src="assets/images/photos/photo4.jpg" alt="Description"> -->
+                Photo 4
+            </div>
+            <div class="photos__item">
+                <!-- <img src="assets/images/photos/photo5.jpg" alt="Description"> -->
+                Photo 5
+            </div>
+            <div class="photos__item">
+                <!-- <img src="assets/images/photos/photo6.jpg" alt="Description"> -->
+                Photo 6
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== LOGOS ======================== -->
+    <section class="logos" id="logos">
+        <p class="section__label">05 / Logos</p>
+        <h2 class="section__title">Logos I've Drawn</h2>
+        <div class="logos__gallery">
+
+            <div class="logos__item">
+                <!-- <img src="assets/logos/logo1.png" alt="Logo name"> -->
+                <span class="logos__item-label">Logo 1</span>
+            </div>
+            <div class="logos__item">
+                <!-- <img src="assets/logos/logo2.png" alt="Logo name"> -->
+                <span class="logos__item-label">Logo 2</span>
+            </div>
+            <div class="logos__item">
+                <!-- <img src="assets/logos/logo3.png" alt="Logo name"> -->
+                <span class="logos__item-label">Logo 3</span>
+            </div>
+            <div class="logos__item">
+                <!-- <img src="assets/logos/logo4.png" alt="Logo name"> -->
+                <span class="logos__item-label">Logo 4</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== CONTACT ======================== -->
+    <section class="contact" id="contact">
+        <p class="section__label">06 / Contact</p>
+        <h2 class="section__title">Let's Connect</h2>
+        <div class="contact__content">
+            <p class="contact__text">
+                I'm always open to new opportunities, collaborations, or just a good conversation.
+                Feel free to reach out!
+            </p>
+            <div class="contact__links">
+                <a href="mailto:your.email@example.com" class="contact__link">
+                    <span class="contact__link-icon">&#9993;</span>
+                    your.email@example.com
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact__link">
+                    <span class="contact__link-icon">in</span>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" class="contact__link">
+                    <span class="contact__link-icon">&lt;/&gt;</span>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer">
+        <span>&copy; 2026 Leah. All rights reserved.</span>
+        <span>Designed & built by Leah</span>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
