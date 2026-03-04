@@ -501,6 +501,9 @@ section {
     letter-spacing: 0.1em;
     color: var(--color-text-muted);
 }
+.logos__item--large img {
+    max-height: 100%;
+}
 
 /* ============================================
    CONTACT SECTION
