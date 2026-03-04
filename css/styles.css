@@ -166,7 +166,7 @@ section {
 }
 
 .hero__name {
-    font-family: var(--font-display);
+    font-family: 'Dancing Script', cursive;
     font-size: clamp(3rem, 8vw, 7rem);
     font-weight: 800;
     letter-spacing: -0.04em;
