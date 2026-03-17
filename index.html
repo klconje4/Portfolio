@@ -7,10 +7,21 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ======================== WALKING CHARACTER ======================== -->
+    <div class="character" id="character">
+        <div class="character__body">
+            <div class="character__head"></div>
+            <div class="character__torso"></div>
+            <div class="character__leg character__leg--left"></div>
+            <div class="character__leg character__leg--right"></div>
+        </div>
+        <!-- Replace the above with your sprite later: -->
+        <!-- <img src="assets/character.png" alt="" class="character__sprite"> -->
+    </div>
 
     <!-- ======================== NAVIGATION ======================== -->
     <nav class="nav">
@@ -19,6 +30,7 @@
         </a>
         <ul class="nav__links">
             <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#photos">Photos</a></li>
@@ -30,59 +42,136 @@
 
     <!-- ======================== HERO ======================== -->
     <section class="hero" id="hero">
-        <p class="hero__greeting">Hi, my name is</p>
-        <h1 class="hero__name">Kalea</h1>
-        <p class="hero__tagline">
-            Cognitive Science & Computer Science student at UC Irvine.
-        </p>
-        <a href="#projects" class="hero__cta">
-            View My Work <span class="hero__cta-arrow">&rarr;</span>
-        </a>
+        <div class="hero__scene">
+            <div class="hero__building hero__building--1"></div>
+            <div class="hero__building hero__building--2"></div>
+            <div class="hero__building hero__building--3"></div>
+            <div class="hero__streetlamp"></div>
+            <div class="hero__streetlamp hero__streetlamp--2"></div>
+        </div>
+        <div class="hero__content">
+            <p class="hero__greeting">welcome to</p>
+            <h1 class="hero__name">Kalea's</h1>
+            <p class="hero__subtitle">neighborhood</p>
+            <p class="hero__tagline">
+                Cognitive Science & Computer Science student at UC Irvine.
+            </p>
+            <a href="#projects" class="hero__cta">
+                <span class="hero__cta-icon">&#9654;</span> Explore
+            </a>
+        </div>
     </section>
 
     <!-- ======================== ABOUT ======================== -->
     <section class="about" id="about">
-        <p class="section__label">01 / About</p>
-        <h2 class="section__title">About Me</h2>
+        <div class="about__sign">
+            <span class="about__sign-icon">&#9734;</span>
+            Meet the Barista
+        </div>
         <div class="about__content">
             <div class="about__photo">
                 <img src="assets/portfoliopic.jpeg" alt="Kalea">
             </div>
             <div class="about__text">
+                <div class="about__nametag">
+                    <span class="about__nametag-label">Hello, my name is</span>
+                    <span class="about__nametag-name">Kalea</span>
+                </div>
                 <p>
                     Hi, I'm Kalea, a third-year at UC Irvine majoring in 
-                    Cognitive Science and minoring in Information & Computer Science, and Management.
-                    I care a lot about the intersection of technology and human experience- whether that's making
+                    Cognitive Science and minoring in Information &amp; Computer Science, and Management.
+                    I care a lot about the intersection of technology and human experience&#8202;&#8212;&#8202;whether that's making
                     digital spaces more accessible, building tools that actually work well for people,
                     or exploring how the mind and machines learn from each other. Outside of class, you'll find me
-                    playing violin, wandering somewhere new, or photgraphing the little things that make life feel beautiful.
+                    playing violin, wandering somewhere new, or photographing the little things that make life feel beautiful.
                 </p>
-                <p>
-                    Add another paragraph about your background, your studies in Cognitive
-                    Science and Computer Science, or what you're currently working on.
-                </p>
-                <div class="about__skills">
-                    <span class="about__skill-tag">Figma</span>
-                    <span class="about__skill-tag">HTML/CSS</span>
-                    <span class="about__skill-tag">JavaScript</span>
-                    <span class="about__skill-tag">React</span>
-                    <span class="about__skill-tag">Next.js</span>
-                    <span class="about__skill-tag">Python</span>
-                    <span class="about__skill-tag">Accessibility</span>
-                    <span class="about__skill-tag">UX Design</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== CAFÉ MENU (SKILLS) ======================== -->
+    <section class="menu" id="menu">
+        <div class="menu__board">
+            <div class="menu__board-header">
+                <h2 class="menu__board-title">Today's Specials</h2>
+                <p class="menu__board-subtitle">What I bring to the table</p>
+            </div>
+            <div class="menu__columns">
+                <div class="menu__column">
+                    <h3 class="menu__category">
+                        <span class="menu__category-icon">&#9749;</span> Hot Drinks
+                        <span class="menu__category-sub">Design &amp; Research</span>
+                    </h3>
+                    <div class="menu__item">
+                        <span class="menu__item-name">The Figma Latte</span>
+                        <span class="menu__item-dots"></span>
+                        <span class="menu__item-tag">UI/UX</span>
+                    </div>
+                    <div class="menu__item">
+                        <span class="menu__item-name">UX Research Roast</span>
+                        <span class="menu__item-dots"></span>
+                        <span class="menu__item-tag">Research</span>
+                    </div>
+                    <div class="menu__item">
+                        <span class="menu__item-name">Accessibility Americano</span>
+                        <span class="menu__item-dots"></span>
+                        <span class="menu__item-tag">A11y</span>
+                    </div>
+                    <div class="menu__item">
+                        <span class="menu__item-name">Prototyping Pourover</span>
+                        <span class="menu__item-dots"></span>
+                        <span class="menu__item-tag">Design</span>
+                    </div>
+                </div>
+                <div class="menu__column">
+                    <h3 class="menu__category">
+                        <span class="menu__category-icon">&#127856;</span> Pastries
+                        <span class="menu__category-sub">Development</span>
+                    </h3>
+                    <div class="menu__item">
+                        <span class="menu__item-name">HTML/CSS Croissant</span>
+                        <span class="menu__item-dots"></span>
+                        <span class="menu__item-tag">Frontend</span>
+                    </div>
+                    <div class="menu__item">
+                        <span class="menu__item-name">JavaScript Scone</span>
+                        <span class="menu__item-dots"></span>
+                        <span class="menu__item-tag">Frontend</span>
+                    </div>
+                    <div class="menu__item">
+                        <span class="menu__item-name">React Danish</span>
+                        <span class="menu__item-dots"></span>
+                        <span class="menu__item-tag">Framework</span>
+                    </div>
+                    <div class="menu__item">
+                        <span class="menu__item-name">Next.js Muffin</span>
+                        <span class="menu__item-dots"></span>
+                        <span class="menu__item-tag">Framework</span>
+                    </div>
+                    <div class="menu__item">
+                        <span class="menu__item-name">Python Biscotti</span>
+                        <span class="menu__item-dots"></span>
+                        <span class="menu__item-tag">Backend</span>
+                    </div>
                 </div>
             </div>
+            <p class="menu__footer-note">&#10043; All items served with passion &amp; attention to detail</p>
         </div>
     </section>
 
     <!-- ======================== PROJECTS ======================== -->
     <section class="projects" id="projects">
-        <p class="section__label">02 / Projects</p>
-        <h2 class="section__title">Selected Work</h2>
+        <div class="section__header">
+            <span class="section__header-icon">&#127959;</span>
+            <div>
+                <p class="section__label">Quest Board</p>
+                <h2 class="section__title">Completed Projects</h2>
+            </div>
+        </div>
         <div class="projects__grid">
 
-            <!-- Project 1 -->
             <div class="project-card">
+                <div class="project-card__level">Quest 01</div>
                 <div class="project-card__image">
                     <!-- Replace with: <img src="assets/images/projects/borrowed.png" alt="Borrowed app"> -->
                     Project screenshot
@@ -97,11 +186,11 @@
                     <span class="project-card__tag">React</span>
                     <span class="project-card__tag">Flask</span>
                 </div>
-                <a href="#" class="project-card__link">View Project &rarr;</a>
+                <a href="#" class="project-card__link">View Project <span>&rarr;</span></a>
             </div>
 
-            <!-- Project 2 -->
             <div class="project-card">
+                <div class="project-card__level">Quest 02</div>
                 <div class="project-card__image">
                     <!-- Replace with: <img src="assets/images/projects/accessibility-hub.png" alt="Accessibility Hub"> -->
                     Project screenshot
@@ -115,7 +204,7 @@
                     <span class="project-card__tag">UX Research</span>
                     <span class="project-card__tag">Prototyping</span>
                 </div>
-                <a href="#" class="project-card__link">View Case Study &rarr;</a>
+                <a href="#" class="project-card__link">View Case Study <span>&rarr;</span></a>
             </div>
 
         </div>
@@ -123,13 +212,21 @@
 
     <!-- ======================== EXPERIENCE ======================== -->
     <section class="experience" id="experience">
-        <p class="section__label">03 / Experience</p>
-        <h2 class="section__title">Where I've Worked</h2>
+        <div class="section__header">
+            <span class="section__header-icon">&#128188;</span>
+            <div>
+                <p class="section__label">Work Log</p>
+                <h2 class="section__title">Experience Points</h2>
+            </div>
+        </div>
         <div class="experience__timeline">
 
             <div class="experience__item">
-                <span class="experience__date">April 2025 &mdash; Present</span>
-                <div>
+                <div class="experience__badge">
+                    <span>&#9733;</span>
+                </div>
+                <div class="experience__card">
+                    <span class="experience__date">April 2025 &mdash; Present</span>
                     <h3 class="experience__role">Digital Accessibility Consultant</h3>
                     <p class="experience__company">UCI Division of Teaching Excellence and Innovation</p>
                     <p class="experience__desc">
@@ -141,8 +238,11 @@
             </div>
 
             <div class="experience__item">
-                <span class="experience__date">Seasonal</span>
-                <div>
+                <div class="experience__badge">
+                    <span>&#9733;</span>
+                </div>
+                <div class="experience__card">
+                    <span class="experience__date">Seasonal</span>
                     <h3 class="experience__role">Conversation Partner</h3>
                     <p class="experience__company">UCI International Programs</p>
                     <p class="experience__desc">
@@ -157,44 +257,33 @@
 
     <!-- ======================== PHOTOS ======================== -->
     <section class="photos" id="photos">
-        <p class="section__label">04 / Photos</p>
-        <h2 class="section__title">Through My Lens</h2>
+        <div class="section__header">
+            <span class="section__header-icon">&#128247;</span>
+            <div>
+                <p class="section__label">Photo Album</p>
+                <h2 class="section__title">Through My Lens</h2>
+            </div>
+        </div>
         <div class="photos__gallery">
-
-            <div class="photos__item">
-                <!-- <img src="assets/images/photos/photo1.jpg" alt="Description"> -->
-                Photo 1
-            </div>
-            <div class="photos__item">
-                <!-- <img src="assets/images/photos/photo2.jpg" alt="Description"> -->
-                Photo 2
-            </div>
-            <div class="photos__item">
-                <!-- <img src="assets/images/photos/photo3.jpg" alt="Description"> -->
-                Photo 3
-            </div>
-            <div class="photos__item">
-                <!-- <img src="assets/images/photos/photo4.jpg" alt="Description"> -->
-                Photo 4
-            </div>
-            <div class="photos__item">
-                <!-- <img src="assets/images/photos/photo5.jpg" alt="Description"> -->
-                Photo 5
-            </div>
-            <div class="photos__item">
-                <!-- <img src="assets/images/photos/photo6.jpg" alt="Description"> -->
-                Photo 6
-            </div>
-
+            <div class="photos__item">Photo 1</div>
+            <div class="photos__item">Photo 2</div>
+            <div class="photos__item">Photo 3</div>
+            <div class="photos__item">Photo 4</div>
+            <div class="photos__item">Photo 5</div>
+            <div class="photos__item">Photo 6</div>
         </div>
     </section>
 
     <!-- ======================== LOGOS ======================== -->
     <section class="logos" id="logos">
-        <p class="section__label">05 / Logos</p>
-        <h2 class="section__title">Logos I've Drawn</h2>
+        <div class="section__header">
+            <span class="section__header-icon">&#127942;</span>
+            <div>
+                <p class="section__label">Collection</p>
+                <h2 class="section__title">Logos I've Drawn</h2>
+            </div>
+        </div>
         <div class="logos__gallery">
-
             <div class="logos__item">
                 <img src="assets/logo.png" alt="ZotRooms Logo">
                 <span class="logos__item-label">ZotRooms Logo</span>
@@ -204,39 +293,39 @@
                 <span class="logos__item-label">Borrowed Logo</span>
             </div>
             <div class="logos__item">
-                <img src="assets/pplogo.png" alt="Logo name"> 
+                <img src="assets/pplogo.png" alt="Personal Logo">
                 <span class="logos__item-label">My personal logo</span>
             </div>
             <div class="logos__item">
-                <!-- <img src="assets/logos/logo4.png" alt="Logo name"> -->
                 <span class="logos__item-label">Logo 4</span>
             </div>
-
         </div>
     </section>
 
     <!-- ======================== CONTACT ======================== -->
     <section class="contact" id="contact">
-        <p class="section__label">06 / Contact</p>
-        <h2 class="section__title">Let's Connect</h2>
-        <div class="contact__content">
-            <p class="contact__text">
-                I'm always open to new opportunities, collaborations, or just a good conversation.
-                Feel free to reach out!
-            </p>
-            <div class="contact__links">
-                <a href="mailto:klconje@gmail.com" class="contact__link">
-                    <span class="contact__link-icon">&#9993;</span>
-                    klconje@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/kalea-conje/" target="_blank" class="contact__link">
-                    <span class="contact__link-icon">in</span>
-                    LinkedIn
-                </a>
-                <a href="https://github.com/klconje4" target="_blank" class="contact__link">
-                    <span class="contact__link-icon">&lt;/&gt;</span>
-                    GitHub
-                </a>
+        <div class="contact__envelope">
+            <div class="contact__envelope-flap"></div>
+            <div class="contact__envelope-body">
+                <h2 class="section__title">Send a Letter</h2>
+                <p class="contact__text">
+                    I'm always open to new opportunities, collaborations, or just a good conversation.
+                    Feel free to reach out!
+                </p>
+                <div class="contact__links">
+                    <a href="mailto:klconje@gmail.com" class="contact__link">
+                        <span class="contact__link-icon">&#9993;</span>
+                        klconje@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/kalea-conje/" target="_blank" class="contact__link">
+                        <span class="contact__link-icon">in</span>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/klconje4" target="_blank" class="contact__link">
+                        <span class="contact__link-icon">&lt;/&gt;</span>
+                        GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -244,7 +333,7 @@
     <!-- ======================== FOOTER ======================== -->
     <footer class="footer">
         <span>&copy; 2026 Kalea. All rights reserved.</span>
-        <span>Designed & built by Kalea</span>
+        <span>Designed &amp; built by Kalea</span>
     </footer>
 
     <script src="js/main.js"></script>
