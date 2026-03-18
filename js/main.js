@@ -10,38 +10,6 @@ document.querySelectorAll('.nav__links a').forEach(link => {
 });
 
 // ============================================
-// FREE-ROAMING REALISTIC CHARACTER
-// ============================================
-const character = document.getElementById('character');
-if (character) {
-    let x = Math.random() * (window.innerWidth - 80) + 40;
-    let direction = 1, speed = 1.2, pauseTimer = 0, isPaused = false;
-    character.style.left = x + 'px';
-    character.classList.add('walking');
-
-    function updateCharacter() {
-        if (isPaused) {
-            if (--pauseTimer <= 0) {
-                isPaused = false;
-                character.classList.add('walking');
-                if (Math.random() > 0.5) direction *= -1;
-            }
-        } else {
-            x += speed * direction;
-            if (x > window.innerWidth - 50) { x = window.innerWidth - 50; direction = -1; }
-            if (x < 50) { x = 50; direction = 1; }
-            character.style.left = x + 'px';
-            character.style.transform = direction < 0 ? 'scaleX(-1)' : 'scaleX(1)';
-            if (Math.random() < 0.003) { isPaused = true; pauseTimer = Math.floor(Math.random() * 140) + 60; character.classList.remove('walking'); }
-            if (Math.random() < 0.002) direction *= -1;
-            if (Math.random() < 0.01) speed = 0.7 + Math.random() * 1.1;
-        }
-        requestAnimationFrame(updateCharacter);
-    }
-    requestAnimationFrame(updateCharacter);
-}
-
-// ============================================
 // BOKEH / DUST PARTICLES
 // ============================================
 const heroParticles = document.getElementById('heroParticles');
