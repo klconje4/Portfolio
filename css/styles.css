@@ -122,35 +122,13 @@ img { max-width: 100%; display: block; }
     transform: translateY(30%);
     transition: transform 0.45s cubic-bezier(0.34, 1.4, 0.64, 1);
 }
-.corner-figure:hover {
-    transform: translateY(0%);
-}
+
+
 .corner-figure img {
     height: 180px;
     width: auto;
     display: block;
     filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
-}
-.corner-figure__tooltip {
-    background: rgba(253,248,238,0.92);
-    backdrop-filter: blur(8px);
-    border: 1.5px solid #c8a060;
-    border-radius: 12px 12px 12px 4px;
-    padding: 0.4rem 0.8rem;
-    font-family: var(--font-handwritten);
-    font-size: 0.85rem;
-    color: #5a3a10;
-    white-space: nowrap;
-    margin-bottom: 6px;
-    box-shadow: 0 4px 12px rgba(100,60,10,0.12);
-    opacity: 0;
-    transform: translateY(6px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
-}
-.corner-figure:hover .corner-figure__tooltip {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .nav__links {
