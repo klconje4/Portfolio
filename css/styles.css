@@ -112,7 +112,7 @@ img { max-width: 100%; display: block; }
 .corner-figure {
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 0;
     z-index: 998;
     pointer-events: all;
     display: flex;
