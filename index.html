@@ -87,196 +87,46 @@
         <button class="nav__toggle" aria-label="Toggle menu">&#9776;</button>
     </nav>
 
-    <!-- ======================== HERO — STREET LEVEL ======================== -->
+    <!-- ======================== HERO — IMAGE BACKGROUND ======================== -->
     <section class="hero" id="hero">
 
-        <!-- Sky -->
-        <div class="sky">
-            <div class="cloud cloud--1"></div>
-            <div class="cloud cloud--2"></div>
-            <div class="cloud cloud--3"></div>
-            <div class="cloud cloud--4"></div>
+        <!-- ① Base image -->
+        <div class="hero__bg"></div>
 
-            <!-- Birds -->
-            <span class="bird" style="top:18%; animation-duration:22s; font-size:0.6rem;">🐦</span>
-            <span class="bird" style="top:24%; animation-duration:32s; animation-delay:8s; font-size:0.5rem;">🐦</span>
-            <span class="bird" style="top:14%; animation-duration:28s; animation-delay:18s;">🐦</span>
+        <!-- ② Cloud layer — floats across the sky strip -->
+        <div class="hero__clouds">
+            <div class="hero-cloud hero-cloud--1"></div>
+            <div class="hero-cloud hero-cloud--2"></div>
+            <div class="hero-cloud hero-cloud--3"></div>
         </div>
 
-        <!-- Floating bokeh / dust particles -->
+        <!-- ③ String lights — stretched across the awning area -->
+        <div class="hero__lights" aria-hidden="true">
+            <svg class="lights-svg" viewBox="0 0 900 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Wire catenary -->
+                <path d="M0,8 Q225,22 450,12 Q675,2 900,16" fill="none" stroke="#5a3e10" stroke-width="1.8"/>
+                <!-- Bulbs -->
+                <g class="bulb-glow"><circle cx="50"  cy="12" r="6" fill="#ffe060"/><line x1="50"  y1="6"  x2="50"  y2="12" stroke="#5a3e10" stroke-width="1.5"/></g>
+                <g class="bulb-glow" style="animation-delay:.35s"><circle cx="130" cy="16" r="6" fill="#ffb050"/><line x1="130" y1="10" x2="130" y2="16" stroke="#5a3e10" stroke-width="1.5"/></g>
+                <g class="bulb-glow" style="animation-delay:.7s"><circle cx="210" cy="19" r="6" fill="#ffe060"/><line x1="210" y1="13" x2="210" y2="19" stroke="#5a3e10" stroke-width="1.5"/></g>
+                <g class="bulb-glow" style="animation-delay:.15s"><circle cx="290" cy="21" r="6" fill="#ffd050"/><line x1="290" y1="15" x2="290" y2="21" stroke="#5a3e10" stroke-width="1.5"/></g>
+                <g class="bulb-glow" style="animation-delay:.9s"><circle cx="370" cy="19" r="6" fill="#ffb050"/><line x1="370" y1="13" x2="370" y2="19" stroke="#5a3e10" stroke-width="1.5"/></g>
+                <g class="bulb-glow" style="animation-delay:.5s"><circle cx="450" cy="14" r="6" fill="#ffe060"/><line x1="450" y1="8"  x2="450" y2="14" stroke="#5a3e10" stroke-width="1.5"/></g>
+                <g class="bulb-glow" style="animation-delay:.25s"><circle cx="530" cy="10" r="6" fill="#ffd050"/><line x1="530" y1="4"  x2="530" y2="10" stroke="#5a3e10" stroke-width="1.5"/></g>
+                <g class="bulb-glow" style="animation-delay:.8s"><circle cx="610" cy="8"  r="6" fill="#ffb050"/><line x1="610" y1="2"  x2="610" y2="8"  stroke="#5a3e10" stroke-width="1.5"/></g>
+                <g class="bulb-glow" style="animation-delay:.4s"><circle cx="690" cy="10" r="6" fill="#ffe060"/><line x1="690" y1="4"  x2="690" y2="10" stroke="#5a3e10" stroke-width="1.5"/></g>
+                <g class="bulb-glow" style="animation-delay:.6s"><circle cx="770" cy="13" r="6" fill="#ffd050"/><line x1="770" y1="7"  x2="770" y2="13" stroke="#5a3e10" stroke-width="1.5"/></g>
+                <g class="bulb-glow" style="animation-delay:.1s"><circle cx="850" cy="16" r="6" fill="#ffb050"/><line x1="850" y1="10" x2="850" y2="16" stroke="#5a3e10" stroke-width="1.5"/></g>
+            </svg>
+        </div>
+
+        <!-- ④ Bokeh particles -->
         <div class="hero-particles" id="heroParticles"></div>
 
-        <!-- Background buildings (far) -->
-        <div class="bg-buildings">
-            <div class="bg-building bg-building--1"></div>
-            <div class="bg-building bg-building--2"></div>
-            <div class="bg-building bg-building--3"></div>
-            <div class="bg-building bg-building--4"></div>
-            <div class="bg-building bg-building--5"></div>
-        </div>
+        <!-- ⑤ Subtle vignette so text pops -->
+        <div class="hero__vignette"></div>
 
-        <!-- Street scene -->
-        <div class="street-scene">
-
-            <!-- Left building -->
-            <div class="building building--left">
-                <div class="building__facade">
-                    <div class="building__window-row">
-                        <div class="building__window"></div>
-                        <div class="building__window"></div>
-                    </div>
-                    <div class="building__window-row">
-                        <div class="building__window building__window--lit"></div>
-                        <div class="building__window"></div>
-                    </div>
-                    <div class="building__shop">
-                        <div class="building__awning building__awning--stripe"></div>
-                        <div class="building__shop-window">
-                            <span>BOOKS</span>
-                        </div>
-                        <div class="building__door building__door--left"></div>
-                    </div>
-                </div>
-                <div class="building__planter building__planter--left"></div>
-            </div>
-
-            <!-- Center café -->
-            <div class="building building--cafe">
-                <!-- String lights across the café top -->
-                <div class="cafe__string-lights">
-                    <svg viewBox="0 0 300 24" preserveAspectRatio="none">
-                        <!-- Wire -->
-                        <path d="M0,6 Q75,14 150,8 Q225,2 300,10" fill="none" stroke="#6a5020" stroke-width="1.2"/>
-                        <!-- Bulbs -->
-                        <g class="bulb-glow">
-                            <circle cx="30"  cy="9"  r="4" fill="#ffe060"/>
-                            <line x1="30"  y1="5"  x2="30"  y2="9"  stroke="#6a5020" stroke-width="1"/>
-                        </g>
-                        <g class="bulb-glow" style="animation-delay:0.4s">
-                            <circle cx="60"  cy="11" r="4" fill="#ffb060"/>
-                            <line x1="60"  y1="7"  x2="60"  y2="11" stroke="#6a5020" stroke-width="1"/>
-                        </g>
-                        <g class="bulb-glow" style="animation-delay:0.8s">
-                            <circle cx="90"  cy="9"  r="4" fill="#ffe060"/>
-                            <line x1="90"  y1="5"  x2="90"  y2="9"  stroke="#6a5020" stroke-width="1"/>
-                        </g>
-                        <g class="bulb-glow" style="animation-delay:0.2s">
-                            <circle cx="120" cy="8"  r="4" fill="#ffd060"/>
-                            <line x1="120" y1="4"  x2="120" y2="8"  stroke="#6a5020" stroke-width="1"/>
-                        </g>
-                        <g class="bulb-glow" style="animation-delay:1s">
-                            <circle cx="150" cy="8"  r="4" fill="#ffb060"/>
-                            <line x1="150" y1="4"  x2="150" y2="8"  stroke="#6a5020" stroke-width="1"/>
-                        </g>
-                        <g class="bulb-glow" style="animation-delay:0.6s">
-                            <circle cx="180" cy="6"  r="4" fill="#ffe060"/>
-                            <line x1="180" y1="2"  x2="180" y2="6"  stroke="#6a5020" stroke-width="1"/>
-                        </g>
-                        <g class="bulb-glow" style="animation-delay:0.3s">
-                            <circle cx="210" cy="5"  r="4" fill="#ffd060"/>
-                            <line x1="210" y1="1"  x2="210" y2="5"  stroke="#6a5020" stroke-width="1"/>
-                        </g>
-                        <g class="bulb-glow" style="animation-delay:0.9s">
-                            <circle cx="240" cy="7"  r="4" fill="#ffb060"/>
-                            <line x1="240" y1="3"  x2="240" y2="7"  stroke="#6a5020" stroke-width="1"/>
-                        </g>
-                        <g class="bulb-glow" style="animation-delay:0.5s">
-                            <circle cx="270" cy="9"  r="4" fill="#ffe060"/>
-                            <line x1="270" y1="5"  x2="270" y2="9"  stroke="#6a5020" stroke-width="1"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="cafe__sign-hanging">
-                    <div class="cafe__sign-bracket"></div>
-                    <div class="cafe__sign-board">☕ Kalea's Café</div>
-                </div>
-
-                <div class="building__facade building__facade--cafe">
-                    <div class="building__window-row">
-                        <div class="building__window building__window--lit"></div>
-                        <div class="building__window building__window--lit"></div>
-                        <div class="building__window"></div>
-                    </div>
-                    <div class="cafe__awning"></div>
-                    <div class="cafe__front">
-                        <div class="cafe__big-window">
-                            <div class="cafe__window-text">OPEN</div>
-                            <div class="cafe__window-plants">
-                                <div class="cafe__plant"></div>
-                                <div class="cafe__plant cafe__plant--tall"></div>
-                                <div class="cafe__plant"></div>
-                            </div>
-                        </div>
-                        <div class="cafe__door">
-                            <div class="cafe__door-window"></div>
-                            <div class="cafe__door-handle"></div>
-                        </div>
-                        <div class="cafe__big-window">
-                            <div class="cafe__window-text">WIFI</div>
-                            <div class="cafe__window-plants">
-                                <div class="cafe__plant cafe__plant--tall"></div>
-                                <div class="cafe__plant"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cafe__sidewalk-decor">
-                    <div class="cafe__table">
-                        <div class="cafe__table-top"></div>
-                        <div class="cafe__chair"></div>
-                        <div class="cafe__chair cafe__chair--right"></div>
-                    </div>
-                    <div class="cafe__menu-board">
-                        <span>Specials<br>Today!</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right building -->
-            <div class="building building--right">
-                <div class="building__facade">
-                    <div class="building__window-row">
-                        <div class="building__window"></div>
-                        <div class="building__window building__window--lit"></div>
-                    </div>
-                    <div class="building__window-row">
-                        <div class="building__window"></div>
-                        <div class="building__window"></div>
-                    </div>
-                    <div class="building__shop">
-                        <div class="building__awning building__awning--solid"></div>
-                        <div class="building__shop-window">
-                            <span>FLOWERS</span>
-                        </div>
-                        <div class="building__door building__door--right"></div>
-                    </div>
-                </div>
-                <div class="building__planter building__planter--right"></div>
-            </div>
-        </div>
-
-        <!-- Sidewalk / ground -->
-        <div class="sidewalk"></div>
-        <div class="street-line"></div>
-
-        <!-- Streetlamps with glow halos -->
-        <div class="streetlamp streetlamp--left">
-            <div class="streetlamp__light">
-                <div class="streetlamp__halo"></div>
-            </div>
-            <div class="streetlamp__pole"></div>
-            <div class="streetlamp__base"></div>
-        </div>
-        <div class="streetlamp streetlamp--right">
-            <div class="streetlamp__light">
-                <div class="streetlamp__halo"></div>
-            </div>
-            <div class="streetlamp__pole"></div>
-            <div class="streetlamp__base"></div>
-        </div>
-
-        <!-- Hero text overlay -->
+        <!-- ⑥ Hero text -->
         <div class="hero__content">
             <p class="hero__greeting">welcome to</p>
             <h1 class="hero__name">Kalea's</h1>
@@ -288,6 +138,7 @@
                 <span class="hero__cta-icon">▶</span> Come Inside
             </a>
         </div>
+
     </section>
 
     <!-- ======================== ABOUT ======================== -->
