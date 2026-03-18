@@ -67,7 +67,7 @@ const heroLights = document.querySelector('.hero__lights');
 window.addEventListener('scroll', () => {
     const s = window.scrollY;
     if (s < window.innerHeight) {
-        if (heroBg) heroBg.style.transform = `translateY(${s * 0.25}px) scale(1.04)`;
+        if (heroBg) heroBg.style.transform = `translateY(${s * 0.25}px)`;
         if (heroLights) heroLights.style.transform = `translateY(${s * 0.1}px)`;
     }
 }, { passive: true });

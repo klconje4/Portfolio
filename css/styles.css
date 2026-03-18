@@ -211,17 +211,11 @@ section { padding: 5rem 3rem; position: relative; }
     position: absolute;
     inset: 0;
     background-image: url('../assets/cafe.jpg');
-    background-size: cover;
+    background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
+    background-color: #b8dff0;
     z-index: 0;
-    /* Very subtle slow zoom for life */
-    animation: heroBreathe 18s ease-in-out infinite alternate;
-    transform-origin: center bottom;
-}
-@keyframes heroBreathe {
-    from { transform: scale(1); }
-    to   { transform: scale(1.04); }
 }
 
 /* ② Cloud layer */
