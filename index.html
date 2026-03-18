@@ -19,8 +19,6 @@
             <div class="character__leg character__leg--left"></div>
             <div class="character__leg character__leg--right"></div>
         </div>
-        <!-- Replace the above with your sprite later: -->
-        <!-- <img src="assets/character.png" alt="" class="character__sprite"> -->
     </div>
 
     <!-- ======================== NAVIGATION ======================== -->
@@ -40,15 +38,131 @@
         <button class="nav__toggle" aria-label="Toggle menu">&#9776;</button>
     </nav>
 
-    <!-- ======================== HERO ======================== -->
+    <!-- ======================== HERO — STREET LEVEL ======================== -->
     <section class="hero" id="hero">
-        <div class="hero__scene">
-            <div class="hero__building hero__building--1"></div>
-            <div class="hero__building hero__building--2"></div>
-            <div class="hero__building hero__building--3"></div>
-            <div class="hero__streetlamp"></div>
-            <div class="hero__streetlamp hero__streetlamp--2"></div>
+        <!-- Sky -->
+        <div class="sky">
+            <div class="cloud cloud--1"></div>
+            <div class="cloud cloud--2"></div>
+            <div class="cloud cloud--3"></div>
         </div>
+
+        <!-- Background buildings (far) -->
+        <div class="bg-buildings">
+            <div class="bg-building bg-building--1"></div>
+            <div class="bg-building bg-building--2"></div>
+            <div class="bg-building bg-building--3"></div>
+        </div>
+
+        <!-- Street scene -->
+        <div class="street-scene">
+            <!-- Left building -->
+            <div class="building building--left">
+                <div class="building__facade">
+                    <div class="building__window-row">
+                        <div class="building__window"></div>
+                        <div class="building__window"></div>
+                    </div>
+                    <div class="building__window-row">
+                        <div class="building__window building__window--lit"></div>
+                        <div class="building__window"></div>
+                    </div>
+                    <div class="building__shop">
+                        <div class="building__awning building__awning--stripe"></div>
+                        <div class="building__shop-window">
+                            <span>BOOKS</span>
+                        </div>
+                        <div class="building__door building__door--left"></div>
+                    </div>
+                </div>
+                <div class="building__planter building__planter--left"></div>
+            </div>
+
+            <!-- Center café -->
+            <div class="building building--cafe">
+                <div class="cafe__sign-hanging">
+                    <div class="cafe__sign-bracket"></div>
+                    <div class="cafe__sign-board">&#9749; Kalea's Café</div>
+                </div>
+                <div class="building__facade building__facade--cafe">
+                    <div class="building__window-row">
+                        <div class="building__window building__window--lit"></div>
+                        <div class="building__window building__window--lit"></div>
+                        <div class="building__window"></div>
+                    </div>
+                    <div class="cafe__awning"></div>
+                    <div class="cafe__front">
+                        <div class="cafe__big-window">
+                            <div class="cafe__window-text">OPEN</div>
+                            <div class="cafe__window-plants">
+                                <div class="cafe__plant"></div>
+                                <div class="cafe__plant cafe__plant--tall"></div>
+                                <div class="cafe__plant"></div>
+                            </div>
+                        </div>
+                        <div class="cafe__door">
+                            <div class="cafe__door-window"></div>
+                            <div class="cafe__door-handle"></div>
+                        </div>
+                        <div class="cafe__big-window">
+                            <div class="cafe__window-text">WIFI</div>
+                            <div class="cafe__window-plants">
+                                <div class="cafe__plant cafe__plant--tall"></div>
+                                <div class="cafe__plant"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cafe__sidewalk-decor">
+                    <div class="cafe__table">
+                        <div class="cafe__table-top"></div>
+                        <div class="cafe__chair"></div>
+                        <div class="cafe__chair cafe__chair--right"></div>
+                    </div>
+                    <div class="cafe__menu-board">
+                        <span>Specials<br>Today!</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right building -->
+            <div class="building building--right">
+                <div class="building__facade">
+                    <div class="building__window-row">
+                        <div class="building__window"></div>
+                        <div class="building__window building__window--lit"></div>
+                    </div>
+                    <div class="building__window-row">
+                        <div class="building__window"></div>
+                        <div class="building__window"></div>
+                    </div>
+                    <div class="building__shop">
+                        <div class="building__awning building__awning--solid"></div>
+                        <div class="building__shop-window">
+                            <span>FLOWERS</span>
+                        </div>
+                        <div class="building__door building__door--right"></div>
+                    </div>
+                </div>
+                <div class="building__planter building__planter--right"></div>
+            </div>
+        </div>
+
+        <!-- Sidewalk / ground -->
+        <div class="sidewalk"></div>
+        <div class="street-line"></div>
+
+        <!-- Streetlamp -->
+        <div class="streetlamp streetlamp--left">
+            <div class="streetlamp__light"></div>
+            <div class="streetlamp__pole"></div>
+        </div>
+        <div class="streetlamp streetlamp--right">
+            <div class="streetlamp__light"></div>
+            <div class="streetlamp__pole"></div>
+        </div>
+
+        <!-- Hero text overlay -->
         <div class="hero__content">
             <p class="hero__greeting">welcome to</p>
             <h1 class="hero__name">Kalea's</h1>
@@ -56,8 +170,8 @@
             <p class="hero__tagline">
                 Cognitive Science & Computer Science student at UC Irvine.
             </p>
-            <a href="#projects" class="hero__cta">
-                <span class="hero__cta-icon">&#9654;</span> Explore
+            <a href="#about" class="hero__cta">
+                <span class="hero__cta-icon">&#9654;</span> Come Inside
             </a>
         </div>
     </section>
@@ -169,13 +283,9 @@
             </div>
         </div>
         <div class="projects__grid">
-
             <div class="project-card">
                 <div class="project-card__level">Quest 01</div>
-                <div class="project-card__image">
-                    <!-- Replace with: <img src="assets/images/projects/borrowed.png" alt="Borrowed app"> -->
-                    Project screenshot
-                </div>
+                <div class="project-card__image">Project screenshot</div>
                 <h3 class="project-card__title">Borrowed</h3>
                 <p class="project-card__desc">
                     A community-based web app enabling neighbors to share and borrow everyday items.
@@ -188,13 +298,9 @@
                 </div>
                 <a href="#" class="project-card__link">View Project <span>&rarr;</span></a>
             </div>
-
             <div class="project-card">
                 <div class="project-card__level">Quest 02</div>
-                <div class="project-card__image">
-                    <!-- Replace with: <img src="assets/images/projects/accessibility-hub.png" alt="Accessibility Hub"> -->
-                    Project screenshot
-                </div>
+                <div class="project-card__image">Project screenshot</div>
                 <h3 class="project-card__title">Accessibility Hub</h3>
                 <p class="project-card__desc">
                     Designed an accessibility tool to help users make their content accessible.
@@ -206,7 +312,6 @@
                 </div>
                 <a href="#" class="project-card__link">View Case Study <span>&rarr;</span></a>
             </div>
-
         </div>
     </section>
 
@@ -220,11 +325,8 @@
             </div>
         </div>
         <div class="experience__timeline">
-
             <div class="experience__item">
-                <div class="experience__badge">
-                    <span>&#9733;</span>
-                </div>
+                <div class="experience__badge"><span>&#9733;</span></div>
                 <div class="experience__card">
                     <span class="experience__date">April 2025 &mdash; Present</span>
                     <h3 class="experience__role">Digital Accessibility Consultant</h3>
@@ -236,11 +338,8 @@
                     </p>
                 </div>
             </div>
-
             <div class="experience__item">
-                <div class="experience__badge">
-                    <span>&#9733;</span>
-                </div>
+                <div class="experience__badge"><span>&#9733;</span></div>
                 <div class="experience__card">
                     <span class="experience__date">Seasonal</span>
                     <h3 class="experience__role">Conversation Partner</h3>
@@ -251,7 +350,6 @@
                     </p>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -284,21 +382,10 @@
             </div>
         </div>
         <div class="logos__gallery">
-            <div class="logos__item">
-                <img src="assets/logo.png" alt="ZotRooms Logo">
-                <span class="logos__item-label">ZotRooms Logo</span>
-            </div>
-            <div class="logos__item logos__item--large">
-                <img src="assets/blogo.png" alt="Borrowed Logo">
-                <span class="logos__item-label">Borrowed Logo</span>
-            </div>
-            <div class="logos__item">
-                <img src="assets/pplogo.png" alt="Personal Logo">
-                <span class="logos__item-label">My personal logo</span>
-            </div>
-            <div class="logos__item">
-                <span class="logos__item-label">Logo 4</span>
-            </div>
+            <div class="logos__item"><img src="assets/logo.png" alt="ZotRooms Logo"><span class="logos__item-label">ZotRooms Logo</span></div>
+            <div class="logos__item logos__item--large"><img src="assets/blogo.png" alt="Borrowed Logo"><span class="logos__item-label">Borrowed Logo</span></div>
+            <div class="logos__item"><img src="assets/pplogo.png" alt="Personal Logo"><span class="logos__item-label">My personal logo</span></div>
+            <div class="logos__item"><span class="logos__item-label">Logo 4</span></div>
         </div>
     </section>
 
