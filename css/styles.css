@@ -211,13 +211,16 @@ section { padding: 5rem 3rem; position: relative; }
     position: absolute;
     inset: 0;
     background-image: url('../assets/cafe.jpg');
-    background-size: contain;
-    background-position: center bottom;
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-color: #b8dff0;
     z-index: 0;
 }
 
+/* Remove the override we added */
+.hero {
+    min-height: 100vh;
+}
 /* ② Cloud layer */
 .hero__clouds {
     position: absolute;
