@@ -30,7 +30,7 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
 /* ============================================
-   REALISTIC WALKING CHARACTER
+   IMAGE AVATAR CHARACTER
    ============================================ */
 .character {
     position: fixed;
@@ -38,26 +38,30 @@ img { max-width: 100%; display: block; }
     z-index: 999;
     pointer-events: none;
     transition: left 0.05s linear;
-    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.28));
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.22));
 }
-.character__svg {
+.character__img {
+    height: 110px;
+    width: auto;
     display: block;
-    width: 40px;
-    height: 72px;
+    transform-origin: bottom center;
 }
-
-/* Leg animations */
-.character.walking .char-leg-left  { animation: charLegL 0.32s ease-in-out infinite alternate; transform-origin: 17px 46px; }
-.character.walking .char-leg-right { animation: charLegR 0.32s ease-in-out infinite alternate; transform-origin: 23px 46px; }
-.character.walking .char-arm-left  { animation: charArmL 0.32s ease-in-out infinite alternate; transform-origin: 10px 29px; }
-.character.walking .char-arm-right { animation: charArmR 0.32s ease-in-out infinite alternate; transform-origin: 30px 29px; }
-.character.walking .char-shoe-left  { animation: charLegL 0.32s ease-in-out infinite alternate; transform-origin: 17px 66px; }
-.character.walking .char-shoe-right { animation: charLegR 0.32s ease-in-out infinite alternate; transform-origin: 23px 66px; }
-
-@keyframes charLegL { from { transform: rotate(-18deg); } to { transform: rotate(18deg); } }
-@keyframes charLegR { from { transform: rotate(18deg); }  to { transform: rotate(-18deg); } }
-@keyframes charArmL { from { transform: rotate(14deg); }  to { transform: rotate(-14deg); } }
-@keyframes charArmR { from { transform: rotate(-14deg); } to { transform: rotate(14deg); } }
+/* Walking bounce — bobs up/down while moving */
+.character.walking .character__img {
+    animation: avatarWalk 0.5s ease-in-out infinite alternate;
+}
+@keyframes avatarWalk {
+    from { transform: translateY(0px) rotate(-1deg); }
+    to   { transform: translateY(-5px) rotate(1deg); }
+}
+/* Idle — gentle breathing sway */
+.character:not(.walking) .character__img {
+    animation: avatarIdle 2.5s ease-in-out infinite alternate;
+}
+@keyframes avatarIdle {
+    from { transform: translateY(0px); }
+    to   { transform: translateY(-3px); }
+}
 
 /* ============================================
    NAVIGATION
@@ -101,6 +105,53 @@ img { max-width: 100%; display: block; }
 
 .nav__logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; }
 .nav__logo img { height: 32px; width: auto; filter: drop-shadow(0 2px 3px rgba(100,60,10,0.2)); }
+
+/* ============================================
+   VIOLIN CORNER FIGURE
+   ============================================ */
+.corner-figure {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+    pointer-events: all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Peek up from bottom — only shows top portion */
+    transform: translateY(30%);
+    transition: transform 0.45s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+.corner-figure:hover {
+    transform: translateY(0%);
+}
+.corner-figure img {
+    height: 180px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
+}
+.corner-figure__tooltip {
+    background: rgba(253,248,238,0.92);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid #c8a060;
+    border-radius: 12px 12px 12px 4px;
+    padding: 0.4rem 0.8rem;
+    font-family: var(--font-handwritten);
+    font-size: 0.85rem;
+    color: #5a3a10;
+    white-space: nowrap;
+    margin-bottom: 6px;
+    box-shadow: 0 4px 12px rgba(100,60,10,0.12);
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+.corner-figure:hover .corner-figure__tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .nav__links {
     display: flex; gap: 0.3rem; list-style: none; align-items: center;
@@ -210,7 +261,7 @@ section { padding: 5rem 3rem; position: relative; }
 .hero__bg {
     position: absolute;
     inset: 0;
-    background-image: url('../assets/cafe.jpg');
+    background-image: url('../assets/town.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
