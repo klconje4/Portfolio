@@ -192,22 +192,14 @@
             </div>
         </div>
         <div class="projects__grid">
-            <div class="project-card">
-                <div class="project-card"
-                    data-quest="01"
-                    data-title="Borrowed"
-                    data-desc="A community-based web app enabling neighbors to share and borrow everyday items. I built the full frontend with Next.js and React, including a profile page, notifications system, pantry tabs, and a polished pitch deck for the hackathon demo."
-                    data-tags="Next.js,React,Flask,MUI"
-                    data-link="#"
-                    data-link-label="View Project"
-                    data-status="Completed">
+            <div class="project-card"
+                data-quest="01" data-title="Borrowed"
+                data-desc="A community-based web app enabling neighbors to share and borrow everyday items. I built the full frontend with Next.js and React, including a profile page, notifications system, pantry tabs, and a polished pitch deck for the hackathon demo."
+                data-tags="Next.js,React,Flask,MUI" data-link="#" data-link-label="View Project" data-status="Completed">
                 <div class="project-card__level">Quest 01</div>
                 <div class="project-card__image">Project screenshot</div>
                 <h3 class="project-card__title">Borrowed</h3>
-                <p class="project-card__desc">
-                    A community-based web app enabling neighbors to share and borrow everyday items.
-                    Built the frontend with Next.js and React.
-                </p>
+                <p class="project-card__desc">A community-based web app enabling neighbors to share and borrow everyday items.</p>
                 <div class="project-card__tags">
                     <span class="project-card__tag">Next.js</span>
                     <span class="project-card__tag">React</span>
@@ -216,19 +208,13 @@
                 <button class="project-card__link quest-open-btn">View Project <span>&#9654;</span></button>
             </div>
             <div class="project-card"
-                    data-quest="02"
-                    data-title="Accessibility Hub"
-                    data-desc="A UX case study and prototype for a digital accessibility tool, designed to help content creators make their work WCAG compliant. Conducted user research, built wireframes, and delivered a fully interactive Figma prototype."
-                    data-tags="Figma,UX Research,Prototyping,WCAG"
-                    data-link="#"
-                    data-link-label="View Case Study"
-                    data-status="Completed">
+                data-quest="02" data-title="Accessibility Hub"
+                data-desc="A UX case study and prototype for a digital accessibility tool, designed to help content creators make their work WCAG compliant. Conducted user research, built wireframes, and delivered a fully interactive Figma prototype."
+                data-tags="Figma,UX Research,Prototyping,WCAG" data-link="#" data-link-label="View Case Study" data-status="Completed">
                 <div class="project-card__level">Quest 02</div>
                 <div class="project-card__image">Project screenshot</div>
                 <h3 class="project-card__title">Accessibility Hub</h3>
-                <p class="project-card__desc">
-                    Designed an accessibility tool to help users make their content accessible.
-                </p>
+                <p class="project-card__desc">Designed an accessibility tool to help users make their content WCAG compliant.</p>
                 <div class="project-card__tags">
                     <span class="project-card__tag">Figma</span>
                     <span class="project-card__tag">UX Research</span>
@@ -303,7 +289,7 @@
         </div>
     </section>
 
-    <!-- ======================== PHOTOS ======================== -->
+    <!-- ======================== PHOTOS — POLAROID WALL ======================== -->
     <section class="photos" id="photos">
         <div class="section__header">
             <span class="section__header-icon">&#128247;</span>
@@ -312,17 +298,35 @@
                 <h2 class="section__title">Through My Lens</h2>
             </div>
         </div>
-        <div class="photos__gallery">
-            <img src="assets/ByeCali.JPEG" alt="aerial view over beach">
-            <img src="assets/Allegro.JPEG" alt="Allegro Fortissimo, Soprano, by me">
-            <img src="assets/chatachuk.JPEG" alt="Chatachuk, Thailand">
-            <img src="assets/Hermosa.jpg" alt="Photo 4">
-            <img src="assets/sfvint.jpg" alt="Photo 5">
-            <img src="assets/girlsnight.jpg" alt="Photo 6">
+        <div class="polaroid-wall">
+            <div class="polaroid" style="--r:-3deg; --y:10px">
+                <img src="assets/ByeCali.JPEG" alt="Bye Cali">
+                <span class="polaroid__caption">bye cali 🌊</span>
+            </div>
+            <div class="polaroid" style="--r:2deg; --y:-8px">
+                <img src="assets/Allegro.JPEG" alt="Allegro Fortissimo">
+                <span class="polaroid__caption">allegro fortissimo 🎶</span>
+            </div>
+            <div class="polaroid" style="--r:-5deg; --y:4px">
+                <img src="assets/chatachuk.JPEG" alt="Chatuchak Thailand">
+                <span class="polaroid__caption">chatuchak 🇹🇭</span>
+            </div>
+            <div class="polaroid" style="--r:4deg; --y:-6px">
+                <img src="assets/Hermosa.jpg" alt="Hermosa">
+                <span class="polaroid__caption">hermosa ☀️</span>
+            </div>
+            <div class="polaroid" style="--r:-2deg; --y:8px">
+                <img src="assets/sfvint.jpg" alt="SF vintage">
+                <span class="polaroid__caption">sf vibes ✨</span>
+            </div>
+            <div class="polaroid" style="--r:3deg; --y:-4px">
+                <img src="assets/girlsnight.jpg" alt="Girls night">
+                <span class="polaroid__caption">girls night 🌙</span>
+            </div>
         </div>
     </section>
 
-    <!-- ======================== LOGOS ======================== -->
+    <!-- ======================== LOGOS — FILM STRIP ======================== -->
     <section class="logos" id="logos">
         <div class="section__header">
             <span class="section__header-icon">&#127942;</span>
@@ -331,11 +335,52 @@
                 <h2 class="section__title">Logos I've Drawn</h2>
             </div>
         </div>
-        <div class="logos__gallery">
-            <div class="logos__item"><img src="assets/logo.png" alt="ZotRooms Logo"><span class="logos__item-label">ZotRooms Logo</span></div>
-            <div class="logos__item logos__item--large"><img src="assets/blogo.png" alt="Borrowed Logo"><span class="logos__item-label">Borrowed Logo</span></div>
-            <div class="logos__item"><img src="assets/pplogo.png" alt="Personal Logo"><span class="logos__item-label">My personal logo</span></div>
-            <div class="logos__item"><span class="logos__item-label">Logo 4</span></div>
+        <div class="film-strip">
+            <div class="film-strip__track">
+                <!-- holes top -->
+                <div class="film-strip__holes film-strip__holes--top">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="film-strip__frames">
+                    <div class="film-frame">
+                        <img src="assets/logo.png" alt="ZotRooms Logo">
+                        <span class="film-frame__label">ZotRooms</span>
+                    </div>
+                    <div class="film-frame">
+                        <img src="assets/blogo.png" alt="Borrowed Logo">
+                        <span class="film-frame__label">Borrowed</span>
+                    </div>
+                    <div class="film-frame">
+                        <img src="assets/pplogo.png" alt="Personal Logo">
+                        <span class="film-frame__label">Personal</span>
+                    </div>
+                    <div class="film-frame film-frame--empty">
+                        <span class="film-frame__placeholder">?</span>
+                        <span class="film-frame__label">Coming soon</span>
+                    </div>
+                    <!-- duplicate for seamless loop -->
+                    <div class="film-frame">
+                        <img src="assets/logo.png" alt="ZotRooms Logo">
+                        <span class="film-frame__label">ZotRooms</span>
+                    </div>
+                    <div class="film-frame">
+                        <img src="assets/blogo.png" alt="Borrowed Logo">
+                        <span class="film-frame__label">Borrowed</span>
+                    </div>
+                    <div class="film-frame">
+                        <img src="assets/pplogo.png" alt="Personal Logo">
+                        <span class="film-frame__label">Personal</span>
+                    </div>
+                    <div class="film-frame film-frame--empty">
+                        <span class="film-frame__placeholder">?</span>
+                        <span class="film-frame__label">Coming soon</span>
+                    </div>
+                </div>
+                <!-- holes bottom -->
+                <div class="film-strip__holes film-strip__holes--bottom">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
         </div>
     </section>
 
