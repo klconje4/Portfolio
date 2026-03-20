@@ -58,76 +58,30 @@ document.querySelectorAll('section').forEach(s => {
 // ============================================
 // QUEST DIALOG
 // ============================================
-const overlay    = document.getElementById('questOverlay');
-const qdBadge    = document.getElementById('qdBadge');
-const qdStatus   = document.getElementById('qdStatus');
-const qdTitle    = document.getElementById('qdTitle');
-const qdDesc     = document.getElementById('qdDesc');
-const qdTags     = document.getElementById('qdTags');
-const qdLink     = document.getElementById('qdLink');
-const questClose = document.getElementById('questClose');
+const questOverlay = document.getElementById('questOverlay');
+const questClose   = document.getElementById('questClose');
 
-document.querySelectorAll('.quest-open-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const card = btn.closest('.project-card');
-        qdBadge.textContent  = 'Quest ' + card.dataset.quest;
-        qdStatus.textContent = '✔ ' + card.dataset.status;
-        qdTitle.textContent  = card.dataset.title;
-        qdDesc.textContent   = card.dataset.desc;
-        qdLink.href          = card.dataset.link;
-        qdLink.textContent   = card.dataset.linkLabel + ' ▶';
-        qdTags.innerHTML     = card.dataset.tags.split(',').map(t => `<span>${t.trim()}</span>`).join('');
-        overlay.classList.add('active');
-        overlay.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-    });
-});
-
-function closeQuest() {
-    overlay.classList.remove('active');
-    overlay.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-}
-
-questClose.addEventListener('click', closeQuest);
-overlay.addEventListener('click', e => { if (e.target === overlay) closeQuest(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeQuest(); });
-
-// ============================================
-// QUEST DIALOG
-// ============================================
-const overlay    = document.getElementById('questOverlay');
-const qdBadge    = document.getElementById('qdBadge');
-const qdStatus   = document.getElementById('qdStatus');
-const qdTitle    = document.getElementById('qdTitle');
-const qdDesc     = document.getElementById('qdDesc');
-const qdTags     = document.getElementById('qdTags');
-const qdLink     = document.getElementById('qdLink');
-const questClose = document.getElementById('questClose');
-
-if (overlay) {
+if (questOverlay) {
     document.querySelectorAll('.quest-open-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const card = btn.closest('.project-card');
-            qdBadge.textContent  = 'Quest ' + card.dataset.quest;
-            qdStatus.textContent = '✔ ' + card.dataset.status;
-            qdTitle.textContent  = card.dataset.title;
-            qdDesc.textContent   = card.dataset.desc;
-            qdLink.href          = card.dataset.link;
-            qdLink.textContent   = card.dataset.linkLabel + ' ▶';
-            qdTags.innerHTML     = card.dataset.tags.split(',').map(t => `<span>${t.trim()}</span>`).join('');
-            overlay.classList.add('active');
-            overlay.setAttribute('aria-hidden', 'false');
+            document.getElementById('qdBadge').textContent  = 'Quest ' + card.dataset.quest;
+            document.getElementById('qdStatus').textContent = '✔ ' + card.dataset.status;
+            document.getElementById('qdTitle').textContent  = card.dataset.title;
+            document.getElementById('qdDesc').textContent   = card.dataset.desc;
+            document.getElementById('qdLink').href          = card.dataset.link;
+            document.getElementById('qdLink').textContent   = card.dataset.linkLabel + ' ▶';
+            document.getElementById('qdTags').innerHTML     = card.dataset.tags.split(',').map(t => `<span>${t.trim()}</span>`).join('');
+            questOverlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
     });
 
     function closeQuest() {
-        overlay.classList.remove('active');
-        overlay.setAttribute('aria-hidden', 'true');
+        questOverlay.classList.remove('active');
         document.body.style.overflow = '';
     }
     questClose.addEventListener('click', closeQuest);
-    overlay.addEventListener('click', e => { if (e.target === overlay) closeQuest(); });
+    questOverlay.addEventListener('click', e => { if (e.target === questOverlay) closeQuest(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeQuest(); });
 }
