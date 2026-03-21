@@ -454,127 +454,65 @@ section { padding: 5rem 3rem; position: relative; }
 /* ============================================
    PHOTOS
    ============================================ */
-.photos__gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
-.photos__item { aspect-ratio: 1; background: var(--color-surface); border: 2px solid var(--color-border); border-radius: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; }
-.photos__item:hover { border-color: var(--color-accent); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-.photos__item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-.photos__item:hover img { transform: scale(1.05); }
-
-/* ============================================
-   LOGOS — PHOTO BOOTH STRIPS
-   ============================================ */
-.logos { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
-
-.booth-strips {
+.polaroid-wall {
     display: flex;
-    gap: 2.5rem;
-    justify-content: center;
-    align-items: flex-start;
     flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
     padding: 1rem 0 2rem;
 }
-
-.booth-strip {
-    width: 160px;
-    background: linear-gradient(180deg, #3a2c5a 0%, #2a1f42 100%);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow:
-        0 8px 30px rgba(60,30,80,0.35),
-        0 2px 8px rgba(0,0,0,0.2),
-        inset 0 0 0 2px rgba(200,160,255,0.15);
-    display: flex;
-    flex-direction: column;
-    /* slight tilt like a real photo strip */
-    transform: rotate(-1.5deg);
+.polaroid {
+    background: #fff;
+    padding: 12px 12px 44px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.14), 0 2px 6px rgba(0,0,0,0.08);
+    transform: rotate(var(--r, 0deg)) translateY(var(--y, 0px));
     transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s;
+    cursor: pointer;
+    width: 200px;
+    flex-shrink: 0;
+    position: relative;
 }
-.booth-strip:hover {
-    transform: rotate(0deg) translateY(-8px) scale(1.04);
-    box-shadow: 0 18px 50px rgba(60,30,80,0.45), 0 4px 12px rgba(0,0,0,0.25);
+.polaroid:hover {
+    transform: rotate(0deg) translateY(-12px) scale(1.06);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.22), 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 10;
 }
-.booth-strip--alt {
-    transform: rotate(1.5deg);
-    background: linear-gradient(180deg, #2a3a2a 0%, #1a2a1a 100%);
-    box-shadow:
-        0 8px 30px rgba(30,60,30,0.35),
-        0 2px 8px rgba(0,0,0,0.2),
-        inset 0 0 0 2px rgba(160,220,160,0.15);
-}
-.booth-strip--alt:hover {
-    transform: rotate(0deg) translateY(-8px) scale(1.04);
-}
-
-/* Gold border accent top */
-.booth-strip::before {
+.polaroid::before {
     content: '';
-    display: block;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, #c8a96e, #f0d898, #c8a96e, transparent);
+    position: absolute;
+    top: -10px; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 20px;
+    background: rgba(255,235,150,0.7);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-
-.booth-strip__frame {
-    margin: 6px 10px;
-    background: var(--color-surface);
-    border-radius: 3px;
-    overflow: hidden;
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: filter 0.3s;
-}
-.booth-strip:hover .booth-strip__frame {
-    filter: brightness(1.05);
-}
-.booth-strip__frame img {
+.polaroid img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 8px;
-    background: var(--color-bg);
-}
-.booth-strip__frame--empty {
-    background: rgba(255,255,255,0.04);
-}
-.booth-strip__frame--empty span {
-    font-size: 2rem;
-    color: rgba(255,255,255,0.2);
-    font-family: var(--font-display);
-}
-
-.booth-strip__footer {
-    padding: 10px 10px 14px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-.booth-strip__title {
-    font-family: var(--font-cursive);
-    font-size: 0.95rem;
-    color: #f0d898;
-    line-height: 1.2;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
-}
-.booth-strip--alt .booth-strip__title {
-    color: #a8d8a0;
-}
-.booth-strip__sub {
-    font-family: var(--font-handwritten);
-    font-size: 0.6rem;
-    color: rgba(255,255,255,0.45);
-    letter-spacing: 0.05em;
-}
-
-/* Gold border accent bottom */
-.booth-strip::after {
-    content: '';
+    aspect-ratio: 1;
+    object-fit: cover;
     display: block;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, #c8a96e, #f0d898, #c8a96e, transparent);
+    filter: contrast(1.02) saturate(1.05);
 }
+.polaroid__caption {
+    position: absolute;
+    bottom: 8px; left: 0; right: 0;
+    text-align: center;
+    font-family: var(--font-handwritten);
+    font-size: 0.85rem;
+    color: #4a3a2a;
+}
+
+/* ============================================
+   LOGOS
+   ============================================ */
+.logos { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+.logos__gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 2rem; }
+.logos__item { aspect-ratio: 1; background: var(--color-bg); border: 2px solid var(--color-border); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; }
+.logos__item:hover { border-color: var(--color-accent); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.logos__item img { max-height: 80%; object-fit: contain; }
+.logos__item-label { margin-top: 0.75rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); }
+.logos__item--large img { max-height: 100%; }
 
 /* ============================================
    CONTACT
