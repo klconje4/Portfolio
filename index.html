@@ -140,7 +140,7 @@
                     <div class="menu__item">
                         <span class="menu__item-name">Digital Accessibility</span>
                         <span class="menu__item-dots"></span>
-                        <span class="menu__item-tag">A11y</span>
+                        <span class="menu__item-tag">Legal compliance</span>
                     </div>
                     <div class="menu__item">
                         <span class="menu__item-name">Prototyping</span>
@@ -184,7 +184,7 @@
         </div>
     </section>
 
-    <!-- ======================== PROJECTS ======================== -->
+     <!-- ======================== PROJECTS ======================== -->
     <section class="projects" id="projects">
         <div class="section__header">
             <span class="section__header-icon">&#127959;</span>
@@ -194,38 +194,64 @@
             </div>
         </div>
         <div class="projects__grid">
-            <div class="project-card">
+            <div class="project-card"
+                data-quest="01" data-title="Borrowed"
+                data-desc="A community-based web app enabling neighbors to share and borrow everyday items. I built the full frontend with Next.js and React, including a profile page, notifications system, pantry tabs, and a polished pitch deck for the hackathon demo."
+                data-tags="Next.js,React,Flask,MUI" data-link="#" data-link-label="View Project" data-status="Completed">
                 <div class="project-card__level">Quest 01</div>
                 <div class="project-card__image">Project screenshot</div>
                 <h3 class="project-card__title">Borrowed</h3>
-                <p class="project-card__desc">
-                    A community-based web app enabling neighbors to share and borrow everyday items.
-                    Built the frontend with Next.js and React.
-                </p>
+                <p class="project-card__desc">A community-based web app enabling neighbors to share and borrow everyday items.</p>
                 <div class="project-card__tags">
                     <span class="project-card__tag">Next.js</span>
                     <span class="project-card__tag">React</span>
                     <span class="project-card__tag">Flask</span>
                 </div>
-                <a href="#" class="project-card__link">View Project <span>&rarr;</span></a>
+                <button class="project-card__link quest-open-btn">View Project <span>&#9654;</span></button>
             </div>
-            <div class="project-card">
+            <div class="project-card"
+                data-quest="02" data-title="Accessibility Hub"
+                data-desc="A UX case study and prototype for a digital accessibility tool, designed to help content creators make their work WCAG compliant. Conducted user research, built wireframes, and delivered a fully interactive Figma prototype."
+                data-tags="Figma,UX Research,Prototyping,WCAG" data-link="#" data-link-label="View Case Study" data-status="Completed">
                 <div class="project-card__level">Quest 02</div>
                 <div class="project-card__image">Project screenshot</div>
                 <h3 class="project-card__title">Accessibility Hub</h3>
-                <p class="project-card__desc">
-                    Designed an accessibility tool to help users make their content accessible.
-                </p>
+                <p class="project-card__desc">Designed an accessibility tool to help users make their content WCAG compliant.</p>
                 <div class="project-card__tags">
                     <span class="project-card__tag">Figma</span>
                     <span class="project-card__tag">UX Research</span>
                     <span class="project-card__tag">Prototyping</span>
                 </div>
-                <a href="#" class="project-card__link">View Case Study <span>&rarr;</span></a>
+                <button class="project-card__link quest-open-btn">View Case Study <span>&#9654;</span></button>
             </div>
         </div>
     </section>
 
+    <!-- ======================== QUEST DIALOG ======================== -->
+    <div class="quest-overlay" id="questOverlay" aria-hidden="true">
+        <div class="quest-dialog" id="questDialog" role="dialog" aria-modal="true">
+            <div class="quest-dialog__header">
+                <div class="quest-dialog__header-left">
+                    <span class="quest-dialog__badge" id="qdBadge">Quest 01</span>
+                    <span class="quest-dialog__status" id="qdStatus">✔ Completed</span>
+                </div>
+                <button class="quest-dialog__close" id="questClose" aria-label="Close">✕</button>
+            </div>
+            <div class="quest-dialog__body">
+                <div class="quest-dialog__image" id="qdImage"><span>Screenshot coming soon</span></div>
+                <div class="quest-dialog__info">
+                    <h2 class="quest-dialog__title" id="qdTitle"></h2>
+                    <p class="quest-dialog__desc" id="qdDesc"></p>
+                    <div class="quest-dialog__tags" id="qdTags"></div>
+                    <a href="#" class="quest-dialog__cta" id="qdLink" target="_blank">Open &#9654;</a>
+                </div>
+            </div>
+            <span class="quest-dialog__corner quest-dialog__corner--tl"></span>
+            <span class="quest-dialog__corner quest-dialog__corner--tr"></span>
+            <span class="quest-dialog__corner quest-dialog__corner--bl"></span>
+            <span class="quest-dialog__corner quest-dialog__corner--br"></span>
+        </div>
+    </div>
     <!-- ======================== EXPERIENCE ======================== -->
     <section class="experience" id="experience">
         <div class="section__header">
@@ -264,7 +290,7 @@
         </div>
     </section>
 
-    <!-- ======================== PHOTOS ======================== -->
+    <!-- ======================== PHOTOS — POLAROID WALL ======================== -->
     <section class="photos" id="photos">
         <div class="section__header">
             <span class="section__header-icon">&#128247;</span>
@@ -273,13 +299,31 @@
                 <h2 class="section__title">Through My Lens</h2>
             </div>
         </div>
-        <div class="photos__gallery">
-            <div class="photos__item">Photo 1</div>
-            <div class="photos__item">Photo 2</div>
-            <div class="photos__item">Photo 3</div>
-            <div class="photos__item">Photo 4</div>
-            <div class="photos__item">Photo 5</div>
-            <div class="photos__item">Photo 6</div>
+        <div class="polaroid-wall">
+            <div class="polaroid" style="--r:-3deg; --y:10px">
+                <img src="assets/ByeCali.JPEG" alt="Bye Cali">
+                <span class="polaroid__caption">bye cali 🌊</span>
+            </div>
+            <div class="polaroid" style="--r:2deg; --y:-8px">
+                <img src="assets/Allegro.JPEG" alt="Allegro Fortissimo">
+                <span class="polaroid__caption">allegro fortissimo 🎶</span>
+            </div>
+            <div class="polaroid" style="--r:-5deg; --y:4px">
+                <img src="assets/chatachuk.JPEG" alt="Chatuchak Thailand">
+                <span class="polaroid__caption">chatuchak 🇹🇭</span>
+            </div>
+            <div class="polaroid" style="--r:4deg; --y:-6px">
+                <img src="assets/Hermosa.jpg" alt="Hermosa">
+                <span class="polaroid__caption">hermosa ☀️</span>
+            </div>
+            <div class="polaroid" style="--r:-2deg; --y:8px">
+                <img src="assets/sfvint.jpg" alt="SF vintage">
+                <span class="polaroid__caption">sf vibes ✨</span>
+            </div>
+            <div class="polaroid" style="--r:3deg; --y:-4px">
+                <img src="assets/girlsnight.jpg" alt="Girls night">
+                <span class="polaroid__caption">girls night 🌙</span>
+            </div>
         </div>
     </section>
 
