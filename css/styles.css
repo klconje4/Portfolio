@@ -96,7 +96,7 @@ img { max-width: 100%; display: block; }
 }
 
 .nav__links {
-    display: flex; gap: 0.3rem; list-style: none; align-items: center;
+    .nav__links { display: flex; gap: 0.3rem; list-style: none; align-items: center; }
 }
 
 .nav__links li a {
