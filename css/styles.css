@@ -452,13 +452,56 @@ section { padding: 5rem 3rem; position: relative; }
 .experience__desc { font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.8; }
 
 /* ============================================
-   PHOTOS
+   PHOTOS — POLAROID WALL
    ============================================ */
-.photos__gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
-.photos__item { aspect-ratio: 1; background: var(--color-surface); border: 2px solid var(--color-border); border-radius: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; }
-.photos__item:hover { border-color: var(--color-accent); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-.photos__item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-.photos__item:hover img { transform: scale(1.05); }
+.polaroid-wall {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem 0 2rem;
+}
+.polaroid {
+    background: #fff;
+    padding: 12px 12px 44px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.14), 0 2px 6px rgba(0,0,0,0.08);
+    transform: rotate(var(--r, 0deg)) translateY(var(--y, 0px));
+    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s;
+    cursor: pointer;
+    width: 200px;
+    flex-shrink: 0;
+    position: relative;
+}
+.polaroid:hover {
+    transform: rotate(0deg) translateY(-12px) scale(1.06);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.22), 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+.polaroid::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 20px;
+    background: rgba(255,235,150,0.7);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.polaroid img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    filter: contrast(1.02) saturate(1.05);
+}
+.polaroid__caption {
+    position: absolute;
+    bottom: 8px; left: 0; right: 0;
+    text-align: center;
+    font-family: var(--font-handwritten);
+    font-size: 0.85rem;
+    color: #4a3a2a;
+}
 
 /* ============================================
    LOGOS
