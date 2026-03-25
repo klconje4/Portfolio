@@ -64,8 +64,9 @@ img { max-width: 100%; display: block; }
     pointer-events: none;
 }
 
-.nav__logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; }
+.nav__logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
 .nav__logo img { height: 32px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)) brightness(1.1); }
+.nav__logo-text { font-family: 'Dancing Script', cursive; font-size: 1.3rem; color: #f0d898; text-shadow: 0 1px 6px rgba(0,0,0,0.5); white-space: nowrap; }
 
 .nav__links {
     display: flex; gap: 0rem; list-style: none; align-items: center; flex-wrap: nowrap;
@@ -389,7 +390,12 @@ section { padding: 5rem 3rem; position: relative; }
 .about__photo img { width: 100%; height: 100%; object-fit: cover; }
 .about__nametag { background: #fff; padding: 0.75rem 1.25rem; border-radius: 8px; margin-bottom: 1.5rem; display: inline-block; border: 2px solid var(--color-border); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .about__nametag-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: #999; display: block; }
-.about__nametag-name { font-family: var(--font-handwritten); font-size: 1.8rem; color: var(--color-accent); display: block; line-height: 1.2; }
+.about__nametag-name { font-family: 'Dancing Script', cursive; font-size: 2rem; color: var(--color-accent); display: block; line-height: 1.2; }
+.about__credentials { margin-bottom: 1.25rem; }
+.about__credentials-school { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-warm); display: block; margin-bottom: 0.4rem; }
+.about__credentials-list { list-style: none; padding: 0; }
+.about__credentials-list li { font-size: 0.82rem; color: var(--color-text-muted); padding: 0.3rem 0; border-bottom: 1px solid var(--color-border); }
+.about__credentials-list li:first-child { border-top: 1px solid var(--color-border); }
 .about__text p { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.9; margin-bottom: 1.5rem; }
 
 /* ============================================

@@ -15,6 +15,7 @@
     <nav class="nav">
         <a href="#" class="nav__logo">
             <img src="assets/pplogo.png" alt="Kalea logo">
+            <span class="nav__logo-text">Kalea's Cafe</span>
         </a>
         <ul class="nav__links">
             <li><a href="#about"><span class="nav__label">About me</span></a></li>
@@ -32,24 +33,17 @@
     <div class="corner-figure" id="cornerFigure">
         <img src="assets/violin_me.png" alt="Kalea playing violin">
     </div>
+
     <section class="hero" id="hero">
-
-        <!-- ① Base image -->
         <div class="hero__bg"></div>
-
-        <!-- ② Cloud layer — floats across the sky strip -->
         <div class="hero__clouds">
             <div class="hero-cloud hero-cloud--1"></div>
             <div class="hero-cloud hero-cloud--2"></div>
             <div class="hero-cloud hero-cloud--3"></div>
         </div>
-
-        <!-- ③ String lights — stretched across the awning area -->
         <div class="hero__lights" aria-hidden="true">
             <svg class="lights-svg" viewBox="0 0 900 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Wire catenary -->
                 <path d="M0,8 Q225,22 450,12 Q675,2 900,16" fill="none" stroke="#5a3e10" stroke-width="1.8"/>
-                <!-- Bulbs -->
                 <g class="bulb-glow"><circle cx="50"  cy="12" r="6" fill="#ffe060"/><line x1="50"  y1="6"  x2="50"  y2="12" stroke="#5a3e10" stroke-width="1.5"/></g>
                 <g class="bulb-glow" style="animation-delay:.35s"><circle cx="130" cy="16" r="6" fill="#ffb050"/><line x1="130" y1="10" x2="130" y2="16" stroke="#5a3e10" stroke-width="1.5"/></g>
                 <g class="bulb-glow" style="animation-delay:.7s"><circle cx="210" cy="19" r="6" fill="#ffe060"/><line x1="210" y1="13" x2="210" y2="19" stroke="#5a3e10" stroke-width="1.5"/></g>
@@ -63,36 +57,23 @@
                 <g class="bulb-glow" style="animation-delay:.1s"><circle cx="850" cy="16" r="6" fill="#ffb050"/><line x1="850" y1="10" x2="850" y2="16" stroke="#5a3e10" stroke-width="1.5"/></g>
             </svg>
         </div>
-
-        <!-- ④ Bokeh particles -->
         <div class="hero-particles" id="heroParticles"></div>
-
-        <!-- ⑤ Subtle vignette so text pops -->
         <div class="hero__vignette"></div>
 
-        <!-- ⑥ Hero text -->
+        <!-- Hero text — clean, no credentials -->
         <div class="hero__content">
             <p class="hero__greeting">welcome to</p>
             <h1 class="hero__name">Kalea's</h1>
             <p class="hero__subtitle">Cafe</p>
-            <p class="hero__tagline">
-                University of California, Irvine <br>
-                Cognitive Science, BS <br>
-                Information &amp; Computer Science, Minor <br>
-                Management, Minor
-            </p>
             <a href="#about" class="hero__cta">
                 <span class="hero__cta-icon">▶</span> Step Inside
             </a>
         </div>
-
     </section>
 
     <!-- ======================== ABOUT ======================== -->
     <section class="about" id="about">
-        <div class="about__sign">
-            Meet the Owner
-        </div>
+        <div class="about__sign">Meet the Owner</div>
         <div class="about__content">
             <div class="about__photo">
                 <img src="assets/portfoliopic.jpeg" alt="Kalea">
@@ -101,6 +82,14 @@
                 <div class="about__nametag">
                     <span class="about__nametag-label">Hello, my name is</span>
                     <span class="about__nametag-name">Kalea</span>
+                </div>
+                <div class="about__credentials">
+                    <span class="about__credentials-school">University of California, Irvine</span>
+                    <ul class="about__credentials-list">
+                        <li>Cognitive Science, BS</li>
+                        <li>Information &amp; Computer Science, Minor</li>
+                        <li>Management, Minor</li>
+                    </ul>
                 </div>
                 <p>
                     Hi, I'm Kalea, a third-year at UC Irvine majoring in
@@ -127,57 +116,21 @@
                         <span class="menu__category-icon">&#9749;</span> Design and Research
                         <span class="menu__category-sub">Design &amp; Research</span>
                     </h3>
-                    <div class="menu__item">
-                        <span class="menu__item-name">Figma</span>
-                        <span class="menu__item-dots"></span>
-                        <span class="menu__item-tag">UI/UX</span>
-                    </div>
-                    <div class="menu__item">
-                        <span class="menu__item-name">UX Research Roast</span>
-                        <span class="menu__item-dots"></span>
-                        <span class="menu__item-tag">Research</span>
-                    </div>
-                    <div class="menu__item">
-                        <span class="menu__item-name">Digital Accessibility</span>
-                        <span class="menu__item-dots"></span>
-                        <span class="menu__item-tag">Legal compliance</span>
-                    </div>
-                    <div class="menu__item">
-                        <span class="menu__item-name">Prototyping</span>
-                        <span class="menu__item-dots"></span>
-                        <span class="menu__item-tag">Design</span>
-                    </div>
+                    <div class="menu__item"><span class="menu__item-name">Figma</span><span class="menu__item-dots"></span><span class="menu__item-tag">UI/UX</span></div>
+                    <div class="menu__item"><span class="menu__item-name">UX Research Roast</span><span class="menu__item-dots"></span><span class="menu__item-tag">Research</span></div>
+                    <div class="menu__item"><span class="menu__item-name">Digital Accessibility</span><span class="menu__item-dots"></span><span class="menu__item-tag">Legal compliance</span></div>
+                    <div class="menu__item"><span class="menu__item-name">Prototyping</span><span class="menu__item-dots"></span><span class="menu__item-tag">Design</span></div>
                 </div>
                 <div class="menu__column">
                     <h3 class="menu__category">
                         <span class="menu__category-icon">&#127856;</span> Development
                         <span class="menu__category-sub">Development</span>
                     </h3>
-                    <div class="menu__item">
-                        <span class="menu__item-name">HTML/CSS</span>
-                        <span class="menu__item-dots"></span>
-                        <span class="menu__item-tag">Frontend</span>
-                    </div>
-                    <div class="menu__item">
-                        <span class="menu__item-name">JavaScript</span>
-                        <span class="menu__item-dots"></span>
-                        <span class="menu__item-tag">Frontend</span>
-                    </div>
-                    <div class="menu__item">
-                        <span class="menu__item-name">React</span>
-                        <span class="menu__item-dots"></span>
-                        <span class="menu__item-tag">Framework</span>
-                    </div>
-                    <div class="menu__item">
-                        <span class="menu__item-name">Next.js</span>
-                        <span class="menu__item-dots"></span>
-                        <span class="menu__item-tag">Framework</span>
-                    </div>
-                    <div class="menu__item">
-                        <span class="menu__item-name">Python</span>
-                        <span class="menu__item-dots"></span>
-                        <span class="menu__item-tag">Backend</span>
-                    </div>
+                    <div class="menu__item"><span class="menu__item-name">HTML/CSS</span><span class="menu__item-dots"></span><span class="menu__item-tag">Frontend</span></div>
+                    <div class="menu__item"><span class="menu__item-name">JavaScript</span><span class="menu__item-dots"></span><span class="menu__item-tag">Frontend</span></div>
+                    <div class="menu__item"><span class="menu__item-name">React</span><span class="menu__item-dots"></span><span class="menu__item-tag">Framework</span></div>
+                    <div class="menu__item"><span class="menu__item-name">Next.js</span><span class="menu__item-dots"></span><span class="menu__item-tag">Framework</span></div>
+                    <div class="menu__item"><span class="menu__item-name">Python</span><span class="menu__item-dots"></span><span class="menu__item-tag">Backend</span></div>
                 </div>
             </div>
             <p class="menu__footer-note">&#10043; All items served with passion &amp; attention to detail</p>
@@ -240,7 +193,7 @@
                 <button class="quest-dialog__close" id="questClose" aria-label="Close">✕</button>
             </div>
             <div class="quest-dialog__body">
-                <div class="quest-dialog__image" id="qdImage"><img src="assets/AccessHub.png" alt="Accessibility Hub case study preview screenshot"></div>
+                <div class="quest-dialog__image" id="qdImage"><img src="assets/AccessHub.png" alt="project preview"></div>
                 <div class="quest-dialog__info">
                     <h2 class="quest-dialog__title" id="qdTitle"></h2>
                     <p class="quest-dialog__desc" id="qdDesc"></p>
@@ -255,7 +208,6 @@
         </div>
     </div>
 
-    
     <!-- ======================== PHOTOS ======================== -->
     <section class="photos" id="photos">
         <div class="section__header">
@@ -265,30 +217,12 @@
             </div>
         </div>
         <div class="polaroid-wall">
-            <div class="polaroid" style="--r:-3deg; --y:10px">
-                <img src="assets/ByeCali.JPEG" alt="Bye Cali">
-                <span class="polaroid__caption">Bye cali</span>
-            </div>
-            <div class="polaroid" style="--r:2deg; --y:-8px">
-                <img src="assets/Allegro.JPEG" alt="Allegro Fortissimo, Soprano poem by Kalea">
-                <span class="polaroid__caption">Allegro Fortissimo, Soprano by Kalea 🎶</span>
-            </div>
-            <div class="polaroid" style="--r:-5deg; --y:4px">
-                <img src="assets/chatachuk.JPEG" alt="Chatuchak Thailand">
-                <span class="polaroid__caption">chatuchak 🇹🇭</span>
-            </div>
-            <div class="polaroid" style="--r:4deg; --y:-6px">
-                <img src="assets/Hermosa.jpg" alt="Hermosa">
-                <span class="polaroid__caption">The Lighthouse Cafe <br> Hermosa Beach, CA</span>
-            </div>
-            <div class="polaroid" style="--r:-2deg; --y:8px">
-                <img src="assets/sfvint.jpg" alt="SF vintage">
-                <span class="polaroid__caption">Hi San Francisco 🌉</span>
-            </div>
-            <div class="polaroid" style="--r:3deg; --y:-4px">
-                <img src="assets/girlsnight.jpg" alt="Girls night">
-                <span class="polaroid__caption">We live for girls night</span>
-            </div>
+            <div class="polaroid" style="--r:-3deg; --y:10px"><img src="assets/ByeCali.JPEG" alt="Bye Cali"><span class="polaroid__caption">Bye cali</span></div>
+            <div class="polaroid" style="--r:2deg; --y:-8px"><img src="assets/Allegro.JPEG" alt="Allegro"><span class="polaroid__caption">Allegro Fortissimo, Soprano by Kalea 🎶</span></div>
+            <div class="polaroid" style="--r:-5deg; --y:4px"><img src="assets/chatachuk.JPEG" alt="Chatuchak Thailand"><span class="polaroid__caption">chatuchak 🇹🇭</span></div>
+            <div class="polaroid" style="--r:4deg; --y:-6px"><img src="assets/Hermosa.jpg" alt="Hermosa"><span class="polaroid__caption">The Lighthouse Cafe <br> Hermosa Beach, CA</span></div>
+            <div class="polaroid" style="--r:-2deg; --y:8px"><img src="assets/sfvint.jpg" alt="SF vintage"><span class="polaroid__caption">Hi San Francisco 🌉</span></div>
+            <div class="polaroid" style="--r:3deg; --y:-4px"><img src="assets/girlsnight.jpg" alt="Girls night"><span class="polaroid__caption">We live for girls night</span></div>
         </div>
     </section>
 
@@ -301,23 +235,17 @@
             </div>
         </div>
         <div class="booth-strips">
-            <!-- Strip 1 -->
             <div class="booth-strip">
                 <div class="booth-strip__frame"><img src="assets/logo.png" alt="ZotRooms Logo"></div>
                 <div class="booth-strip__frame"><img src="assets/blogo.png" alt="Borrowed Logo"></div>
                 <div class="booth-strip__frame"><img src="assets/pplogo.png" alt="Personal Logo"></div>
-                <div class="booth-strip__footer">
-                    <span class="booth-strip__title">Logos I've Drawn</span>
-                </div>
+                <div class="booth-strip__footer"><span class="booth-strip__title">Logos I've Drawn</span></div>
             </div>
-            <!-- Strip 2 -->
             <div class="booth-strip booth-strip--alt">
                 <div class="booth-strip__frame booth-strip__frame--empty"><span>?</span></div>
                 <div class="booth-strip__frame booth-strip__frame--empty"><span>?</span></div>
                 <div class="booth-strip__frame booth-strip__frame--empty"><span>?</span></div>
-                <div class="booth-strip__footer">
-                    <span class="booth-strip__title">Coming Soon</span>
-                </div>
+                <div class="booth-strip__footer"><span class="booth-strip__title">Coming Soon</span></div>
             </div>
         </div>
     </section>
@@ -337,11 +265,7 @@
                     <span class="experience__date">April 2025 &mdash; Present</span>
                     <h3 class="experience__role">Digital Accessibility Consultant</h3>
                     <p class="experience__company">UCI Division of Teaching Excellence and Innovation</p>
-                    <p class="experience__desc">
-                        Provide one-on-one consultations with professors to make educational
-                        materials compliant with ADA digital accessibility requirements.
-                        Lead workshops on accessibility best practices.
-                    </p>
+                    <p class="experience__desc">Provide one-on-one consultations with professors to make educational materials compliant with ADA digital accessibility requirements. Lead workshops on accessibility best practices.</p>
                 </div>
             </div>
             <div class="experience__item">
@@ -350,24 +274,16 @@
                     <span class="experience__date">Seasonal</span>
                     <h3 class="experience__role">Conversation Partner</h3>
                     <p class="experience__company">UCI Division of Continuing Education</p>
-                    <p class="experience__desc">
-                        •Regularly meet and talk with a group of appointed 4-6 students •Plan activities 
-                        •Share American culture and traditions •Encourage and motivate students to speak english 
-                        •Lead ice-breaker and team-building activities •Keep students engaged in conversation for the entire session
-                    </p>
+                    <p class="experience__desc">•Regularly meet and talk with a group of appointed 4-6 students •Plan activities •Share American culture and traditions •Encourage and motivate students to speak english •Lead ice-breaker and team-building activities •Keep students engaged in conversation for the entire session</p>
                 </div>
             </div>
             <div class="experience__item">
                 <div class="experience__badge"><span>&#9733;</span></div>
                 <div class="experience__card">
-                    <span class="experience__date">July 2025-August 2025</span>
+                    <span class="experience__date">July 2025 &mdash; August 2025</span>
                     <h3 class="experience__role">Resident Advisor</h3>
                     <p class="experience__company">UCI Division of Continuing Education</p>
-                    <p class="experience__desc">
-                        •Ensure safety & security of participants •Liaison with UCI Housing staff & Dining staff 
-                        •Conduct hall meetings •Assist with check-ins and check-outs 
-                        •Hall set up and cleanup
-                    </p>
+                    <p class="experience__desc">•Ensure safety &amp; security of participants •Liaison with UCI Housing staff &amp; Dining staff •Conduct hall meetings •Assist with check-ins and check-outs •Hall set up and cleanup</p>
                 </div>
             </div>
         </div>
@@ -379,14 +295,11 @@
             <div class="contact__envelope-flap"></div>
             <div class="contact__envelope-body">
                 <h2 class="section__title">Send a Letter</h2>
-                <p class="contact__text">
-                    I'm always open to new opportunities, collaborations, or just a good conversation.
-                    Feel free to reach out!
-                </p>
+                <p class="contact__text">I'm always open to new opportunities, collaborations, or just a good conversation. Feel free to reach out!</p>
                 <div class="contact__links">
-                    <a href="/cdn-cgi/l/email-protection#c8a3a4aba7a6a2adfc88bdaba1e6adacbd" class="contact__link">
+                    <a href="mailto:klconje@gmail.com" class="contact__link">
                         <span class="contact__link-icon">&#9993;</span>
-                        <span class="__cf_email__" data-cfemail="32595e515d5c5857067247515b1c575647">[email&#160;protected]</span>
+                        klconje@gmail.com
                     </a>
                     <a href="https://www.linkedin.com/in/kalea-conje/" target="_blank" class="contact__link">
                         <span class="contact__link-icon">in</span>
