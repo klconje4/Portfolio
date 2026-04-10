@@ -55,6 +55,7 @@ document.querySelectorAll('section').forEach(s => {
     s.style.transition = 'opacity 0.65s ease, transform 0.65s ease';
     fadeObserver.observe(s);
 });
+
 // ============================================
 // QUEST DIALOG
 // ============================================
@@ -72,6 +73,12 @@ if (questOverlay) {
             document.getElementById('qdLink').href          = card.dataset.link;
             document.getElementById('qdLink').textContent   = card.dataset.linkLabel + ' ▶';
             document.getElementById('qdTags').innerHTML     = card.dataset.tags.split(',').map(t => `<span>${t.trim()}</span>`).join('');
+
+            // Swap the dialog image to match the clicked card
+            const qdImg = document.querySelector('#qdImage img');
+            qdImg.src = card.dataset.image;
+            qdImg.alt = card.dataset.title + ' preview';
+
             questOverlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         });

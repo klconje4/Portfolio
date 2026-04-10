@@ -60,7 +60,6 @@
         <div class="hero-particles" id="heroParticles"></div>
         <div class="hero__vignette"></div>
 
-        <!-- Hero text — clean, no credentials -->
         <div class="hero__content">
             <p class="hero__greeting">welcome to</p>
             <h1 class="hero__name">Kalea's</h1>
@@ -147,10 +146,17 @@
             </div>
         </div>
         <div class="projects__grid">
+
+            <!-- QUEST 01 — data-image added -->
             <div class="project-card"
-                data-quest="01" data-title="Borrowed"
+                data-quest="01"
+                data-title="Borrowed"
+                data-image="assets/borrowed logo.jpg"
                 data-desc="A community-based web app concept designed to help neighbors borrow, lend, and share everyday items and services within their housing community."
-                data-tags="Next.js,React,Flask,MUI" data-link="assets/Borrowed.pdf" data-link-label="View Project" data-status="In progress">
+                data-tags="Next.js,React,Flask,MUI"
+                data-link="assets/Borrowed.pdf"
+                data-link-label="View Project"
+                data-status="In progress">
                 <div class="project-card__level">Quest 01</div>
                 <div class="project-card__image"><img src="assets/borrowed logo.jpg" alt="Borrowed screenshot"></div>
                 <h3 class="project-card__title">Borrowed</h3>
@@ -164,10 +170,17 @@
                 </div>
                 <button class="project-card__link quest-open-btn">View details <span>&#9654;</span></button>
             </div>
+
+            <!-- QUEST 02 — data-image added -->
             <div class="project-card"
-                data-quest="02" data-title="Accessibility Hub"
+                data-quest="02"
+                data-title="Accessibility Hub"
+                data-image="assets/Ahubprev.png"
                 data-desc="A UX case study and prototype for a digital accessibility tool, designed to help content creators make their work WCAG compliant. Conducted user research, built wireframes, and delivered a fully interactive Figma prototype."
-                data-tags="Figma,UX Research,Prototyping,WCAG" data-link="assets/AHub.pdf" data-link-label="View Case Study" data-status="Completed">
+                data-tags="Figma,UX Research,Prototyping,WCAG"
+                data-link="assets/AHub.pdf"
+                data-link-label="View Case Study"
+                data-status="Completed">
                 <div class="project-card__level">Quest 02</div>
                 <div class="project-card__image"><img src="assets/Ahubprev.png" alt="Accessibility Hub screenshot"></div>
                 <h3 class="project-card__title">Accessibility Hub</h3>
@@ -180,6 +193,7 @@
                 </div>
                 <button class="project-card__link quest-open-btn">View details <span>&#9654;</span></button>
             </div>
+
         </div>
     </section>
 
@@ -194,7 +208,8 @@
                 <button class="quest-dialog__close" id="questClose" aria-label="Close">✕</button>
             </div>
             <div class="quest-dialog__body">
-                <div class="quest-dialog__image" id="qdImage"><img src="assets/AccessHub.png" alt="project preview"></div>
+                <!-- src is intentionally blank — JS fills it in per card -->
+                <div class="quest-dialog__image" id="qdImage"><img src="" alt="project preview"></div>
                 <div class="quest-dialog__info">
                     <h2 class="quest-dialog__title" id="qdTitle"></h2>
                     <p class="quest-dialog__desc" id="qdDesc"></p>
