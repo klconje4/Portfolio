@@ -29,6 +29,7 @@ This portfolio is something I coded (okay, maybe vibecoded a little lol) myself 
 ## 🧰 Built With
 
 - HTML / CSS / JavaScript
+- Claude for code assistance
 - Google Fonts — Dancing Script, Syne, DM Sans, Caveat
 - Hosted on GitHub Pages
 
