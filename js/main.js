@@ -92,3 +92,11 @@ if (questOverlay) {
     questOverlay.addEventListener('click', e => { if (e.target === questOverlay) closeQuest(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeQuest(); });
 }
+// ============================================
+// WIP RIBBON ON IN PROGRESS CARDS
+// ============================================
+document.querySelectorAll('.project-card').forEach(card => {
+    if (card.dataset.status === 'In progress') {
+        card.classList.add('project-card--wip');
+    }
+});
