@@ -448,6 +448,15 @@ section { padding: 5rem 3rem; position: relative; }
 .experience__role { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem; }
 .experience__company { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0.75rem; }
 .experience__desc { font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.8; }
+.experience__cta {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    margin-top: 0.75rem;
+    font-size: 0.7rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--color-accent);
+    transition: gap 0.3s;
+}
+.experience__cta:hover { gap: 0.8rem; }
 
 /* ============================================
    PHOTOS
