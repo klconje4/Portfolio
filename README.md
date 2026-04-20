@@ -2,7 +2,7 @@
 
 > A cozy neighborhood café-themed portfolio built with HTML, CSS, and JavaScript.
 
-**Live Site:** [https://klconje4.github.io/Portfolio/](https://klconje4.github.io/Portfolio/)
+**Live Site:** http://kalealc.me/
 
 ---
 
