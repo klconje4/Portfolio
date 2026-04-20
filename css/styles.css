@@ -841,3 +841,17 @@ section { padding: 5rem 3rem; position: relative; }
 .quest-dialog__corner--tr { top: 6px; right: 6px; border-width: 3px 3px 0 0; border-radius: 0 4px 0 0; }
 .quest-dialog__corner--bl { bottom: 6px; left: 6px; border-width: 0 0 3px 3px; border-radius: 0 0 0 4px; }
 .quest-dialog__corner--br { bottom: 6px; right: 6px; border-width: 0 3px 3px 0; border-radius: 0 0 4px 0; }
+.quest-dialog__ctas {
+    display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: auto;
+}
+.quest-dialog__cta--disabled {
+    background: var(--color-border);
+    color: var(--color-text-muted);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.quest-dialog__cta--disabled:hover {
+    transform: none;
+    box-shadow: none;
+}

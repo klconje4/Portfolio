@@ -70,8 +70,32 @@ if (questOverlay) {
             document.getElementById('qdStatus').textContent = '✔ ' + card.dataset.status;
             document.getElementById('qdTitle').textContent  = card.dataset.title;
             document.getElementById('qdDesc').textContent   = card.dataset.desc;
-            document.getElementById('qdLink').href          = card.dataset.link;
-            document.getElementById('qdLink').textContent   = card.dataset.linkLabel + ' ▶';
+            const qdCtas = document.getElementById('qdCtas');
+            qdCtas.innerHTML = '';
+            if (card.dataset.links) {
+                JSON.parse(card.dataset.links).forEach(btn => {
+                    if (btn.style === 'disabled') {
+                        const span = document.createElement('span');
+                        span.className = 'quest-dialog__cta quest-dialog__cta--disabled';
+                        span.textContent = btn.label;
+                        qdCtas.appendChild(span);
+                    } else {
+                        const a = document.createElement('a');
+                        a.href = btn.url;
+                        a.target = '_blank';
+                        a.className = 'quest-dialog__cta';
+                        a.textContent = btn.label + ' ▶';
+                        qdCtas.appendChild(a);
+                    }
+                });
+            } else {
+                const a = document.createElement('a');
+                a.href = card.dataset.link;
+                a.target = '_blank';
+                a.className = 'quest-dialog__cta';
+                a.textContent = card.dataset.linkLabel + ' ▶';
+                qdCtas.appendChild(a);
+}
             document.getElementById('qdTags').innerHTML     = card.dataset.tags.split(',').map(t => `<span>${t.trim()}</span>`).join('');
 
             // Swap the dialog image to match the clicked card
