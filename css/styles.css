@@ -262,35 +262,6 @@ section { padding: 5rem 3rem; position: relative; }
     to   { transform: translateX(calc(100vw + 280px)); }
 }
 
-/* ③ String lights */
-.hero__lights {
-    position: absolute;
-    /* Position over the awning area of the image — tweak top % to align */
-    top: 36%;
-    left: 0; right: 0;
-    height: 50px;
-    z-index: 3;
-    pointer-events: none;
-    padding: 0;
-}
-.lights-svg {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-}
-.bulb-glow {
-    animation: bulbPulse 2.6s ease-in-out infinite alternate;
-}
-.bulb-glow circle {
-    filter: drop-shadow(0 0 5px rgba(255,215,60,0.95)) drop-shadow(0 0 10px rgba(255,190,40,0.6));
-}
-@keyframes bulbPulse {
-    from { opacity: 0.75; }
-    to   { opacity: 1.0;  filter: drop-shadow(0 0 9px rgba(255,215,60,1)) drop-shadow(0 0 18px rgba(255,190,40,0.7)); }
-}
-.bulb-glow:nth-child(2n) { animation-delay: 0.4s; }
-.bulb-glow:nth-child(3n) { animation-delay: 0.9s; }
-.bulb-glow:nth-child(4n) { animation-delay: 1.4s; }
 
 /* ④ Bokeh particles */
 .hero-particles {
